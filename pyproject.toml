@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spatial-membership-audit"
+version = "3.0.0"
+description = "Depth-standardized rarefaction-extrapolation, conditional coverage matching, joint-permutation DUA inference, and stability weighting for spatial colocalization"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+
+[project.scripts]
+spatial-membership-audit = "spatial_membership_audit.__main__:main"
+spatial-membership-inspect = "spatial_membership_audit.inspect_counts:main"
+
+[project.optional-dependencies]
+io = ["pandas>=2.0", "h5py>=3.8", "pyarrow>=12"]
+scverse = ["anndata>=0.10", "pandas>=2.0", "h5py>=3.8"]
+validation = ["pandas>=2.0", "pyarrow>=12", "numba>=0.59", "statsmodels>=0.14", "scikit-learn>=1.3", "shapely>=2", "matplotlib>=3.7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

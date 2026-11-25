@@ -1,0 +1,75 @@
+{
+  "protocol_version": "3.0.0",
+  "frozen_stage": "BEFORE_NTMA_EXPRESSION_EXTRACTION",
+  "primary_cross_platform": {
+    "mode": "split_half",
+    "pairing": "both",
+    "q0": 0.75,
+    "n_draws": 20,
+    "split_half_grid": [1.0, 0.85, 0.75, 0.65, 0.5, 0.35, 0.25, 0.15, 0.1],
+    "split_half_max_cells": 10000,
+    "split_half_reps": 3,
+    "split_half_enforce_monotone": true,
+    "split_half_min_q": 0.05,
+    "ratio_estimator": "zero_inclusive_mean_o_over_mean_e",
+    "availability_threshold": 0.9,
+    "inference": "synchronized_joint_permutation",
+    "n_permutations_cohort": 199,
+    "n_permutations_single_unit": 999,
+    "pvalue_formula": "phipson_smyth_plus_one",
+    "radius_um": 25.0
+  },
+  "secondary_moderate_gap": {
+    "mode": "mitm",
+    "mitm_mode": "geometric",
+    "extrap_method": "hier_eb",
+    "extrap_scale": "inv_sqrtd",
+    "ladder_qs": [1.0, 0.85, 0.75, 0.65, 0.5],
+    "min_median_depth": 2.0,
+    "recommended_min_median_depth": 25.0,
+    "max_cond_flip_rate": 0.45,
+    "fallback_mode": "rarefaction"
+  },
+  "single_specimen_map": {
+    "mode": "stability_weighted",
+    "stability_q": 0.75,
+    "stability_power": 1.0,
+    "n_draws": 20
+  },
+  "unified_evaluation_framework": {
+    "primary_2d_endpoint": [
+      "cross_platform_icc_and_paired_zero_effect_bh_fdr",
+      "biological_eta2_retention_and_sd_ratio"
+    ],
+    "common_unit_set_required": true,
+    "mandatory_metrics": [
+      "icc",
+      "pearson_r",
+      "spearman_rho",
+      "mae",
+      "med_abs_diff",
+      "eta2_retention",
+      "sd_ratio",
+      "availability_pct"
+    ],
+    "paired_null_tests": ["paired_ttest", "wilcoxon_signed_rank", "disjoint_50_50_split"],
+    "bootstrap_resamples": 2000
+  },
+  "prospective_cohort": {
+    "name": "Wang_2025_nTMA",
+    "source_doi": "10.5281/zenodo.16848917",
+    "tracks": {
+      "Track_N_A": ["2023_xenium_breast_nTMA.h5ad", "2023_cosmx_multitissue_nTMA.h5ad"],
+      "Track_N_B": ["2023_xenium_breast_nTMA.h5ad", "2023_merscope_breast_nTMA.h5ad"],
+      "Track_N_C": ["2023_xenium_breast_nTMA.h5ad", "2023_xenium_panhuman_nTMA.h5ad"]
+    },
+    "fixed_arms": [
+      "naive",
+      "mnn_rescaleBatches",
+      "soft_tau005",
+      "depth_only_2s_q075",
+      "split_half_2s_q075_default",
+      "mitm_geom_eb_secondary"
+    ]
+  }
+}

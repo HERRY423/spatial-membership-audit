@@ -1,0 +1,9 @@
+cell_id	replicate	label
+a	baseline	B
+b	baseline	CD8
+c	baseline	CD4
+d	baseline	Myeloid
+a	toy_1	B
+b	toy_1	UNKNOWN
+c	toy_1	CD8
+d	toy_1	Myeloid

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use spatial-membership-audit in your research, please cite this software release."
+type: software
+title: "spatial-membership-audit: Rarefaction-extrapolation, conditional coverage matching, joint-permutation DUA inference, and stability weighting for spatial colocalization"
+version: "3.0.0"
+license: MIT
+keywords:
+  - spatial transcriptomics
+  - colocalization
+  - rarefaction-extrapolation
+  - coverage matching
+  - detection uncertainty
+  - permutation testing
+  - reproducibility
+authors:
+  - name: "Spatial Membership Audit Contributors"
