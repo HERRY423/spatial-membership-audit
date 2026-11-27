@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-27T07:58:06.230550+00:00",
+  "generated_utc": "2026-11-27T08:44:23.972379+00:00",
   "package_dir": "manuscript/gb_methodology_v3_2026-11-25",
   "software_version": "3.0.0",
   "software_freeze_tag": "v3.0.0-protocol-freeze-20261125",
@@ -15,7 +15,7 @@
     "SuppFigure1_m242t_registration_and_imc_qc.png",
     "SuppFigure2_sensitivity_and_conformal_sweeps.png"
   ],
-  "c_drive_free_gb": 3.44,
+  "c_drive_free_gb": 3.41,
   "audits": {
     "abstract_word_count_whitespace": 98,
     "abstract_limit": 100,
@@ -243,31 +243,31 @@
       }
     ]
   },
-  "deliverable_count": 37,
+  "deliverable_count": 38,
   "sha256_manifest": {
     "manuscript/gb_methodology_v3_2026-11-25/Additional_file_1_Supplementary_Information.pdf": {
-      "bytes": 3737452,
-      "sha256": "5c4cc0b31dd8acdca9aa7ba90a1503d7ff3171ec487c5a795237457ff910d8cb"
+      "bytes": 3738044,
+      "sha256": "1bbb4eaf3d27fa60d08ff5239bdba30a74e4a8d6aca474db74eb4ba19b25245d"
     },
     "manuscript/gb_methodology_v3_2026-11-25/Additional_file_2_Supplementary_Tables.xlsx": {
-      "bytes": 295571,
-      "sha256": "ed3b2d285bb41cf8dba59a3c5f7ec83460b429cf3b86735eaf70f0d3ba61b208"
+      "bytes": 295866,
+      "sha256": "edce082a5f367c88ec006015125b14fc9c6d834c2662387f3430b9b2d95aa89e"
     },
     "manuscript/gb_methodology_v3_2026-11-25/ANALYSIS_HISTORY.md": {
-      "bytes": 9369,
-      "sha256": "99d5ceb58ff4235fa12d8af49e29c1d2cd5148e5cd9beac41f2a534da608cc80"
+      "bytes": 9384,
+      "sha256": "6524527f2bf1165530bbb04686c1f65b0c17672c7fff39c2841d4f823d1db490"
     },
     "manuscript/gb_methodology_v3_2026-11-25/AUTHOR_SIGNOFF_CHECKLIST.md": {
-      "bytes": 4200,
-      "sha256": "4d6aa17938b901b2b1be394275157a57c471437765365c3f891423519a8b0d70"
+      "bytes": 4420,
+      "sha256": "ec61939422bb258c38ac7b77e358164ae81fb98232235dfd1b19420c5a04577d"
     },
     "manuscript/gb_methodology_v3_2026-11-25/COVER_LETTER_GENOME_BIOLOGY.md": {
       "bytes": 6113,
       "sha256": "fb359105fe866c8694ae2b34ae9cd8d899699dad5c57a3de4bc639e4e83c09d3"
     },
     "manuscript/gb_methodology_v3_2026-11-25/EVIDENCE_CROSSWALK.md": {
-      "bytes": 10651,
-      "sha256": "505f61b3ed7f508952c3b7990f23021a920c108647462aa8ff9586b3710d3b74"
+      "bytes": 10707,
+      "sha256": "334e239753ebb9e15f713a41497ab3de50c98b4c93d0a61bd38485873e549d0e"
     },
     "manuscript/gb_methodology_v3_2026-11-25/figures/Figure1_problem_framework_and_protocol_freeze.pdf": {
       "bytes": 39402,
@@ -319,7 +319,7 @@
     },
     "manuscript/gb_methodology_v3_2026-11-25/figures/SuppFigure1_m242t_registration_and_imc_qc.pdf": {
       "bytes": 3539105,
-      "sha256": "e3aafb43e6713b2dd4cd6ec84be695a963bce8ec069cf8f330c99ce0cab43870"
+      "sha256": "6a801189bd91781d4590c5ac9ea9065ecc295ab7691e54266bc6e61498865157"
     },
     "manuscript/gb_methodology_v3_2026-11-25/figures/SuppFigure1_m242t_registration_and_imc_qc.png": {
       "bytes": 3349392,
@@ -333,21 +333,25 @@
       "bytes": 623157,
       "sha256": "bc1efd4b9f0ad4e3a1444790938fb80a446e08dc71b3d5eef8a2d9c40736e978"
     },
+    "manuscript/gb_methodology_v3_2026-11-25/github_archive_receipt.json": {
+      "bytes": 633,
+      "sha256": "d2c2b8d56b3f2a665f4630e2cc9ac970f7415f1393c649bb0c6aa8457ebc4871"
+    },
     "manuscript/gb_methodology_v3_2026-11-25/MANUSCRIPT_GB_METHODOLOGY_v3.md": {
-      "bytes": 116272,
-      "sha256": "32c7d786e8e17c6d74e0518cc687a898cc5b7e48708ae5df223512bf005be6c7"
+      "bytes": 117398,
+      "sha256": "bd93354eee483abbab31ba51957817bc397c91bd924d46d4b8c3d5f5d903dd8d"
     },
     "manuscript/gb_methodology_v3_2026-11-25/PRESUBMISSION_ENQUIRY.md": {
       "bytes": 7652,
       "sha256": "c785a6ae4bf1b20cbdc53807313ad1f969ae8bee8d657af3b5b4fe66dc514e65"
     },
     "manuscript/gb_methodology_v3_2026-11-25/scripts/build_additional_files_v3.py": {
-      "bytes": 19943,
-      "sha256": "b50d7b4ee66505f3a8f6167bd036da79b78056f59db855f986a6766ed35a16f5"
+      "bytes": 20606,
+      "sha256": "3ccca7d06d1fff787061cfaff318ea59425fb15072eb36d613fa79e0b581de54"
     },
     "manuscript/gb_methodology_v3_2026-11-25/scripts/build_docx_and_verify_v3.py": {
-      "bytes": 34933,
-      "sha256": "a6a0799b4c428ec62ac73cb36a1f7251c59cd055250eb3571367b22e859b2d7f"
+      "bytes": 37864,
+      "sha256": "577ea3d151423ece184edd173d40f562974ff14125edee8ab5da46bca68ce83a"
     },
     "manuscript/gb_methodology_v3_2026-11-25/scripts/build_fig3.py": {
       "bytes": 23746,
@@ -370,28 +374,28 @@
       "sha256": "3071060b87a55ddc988d0a069858e1dfe6290c3c2577210c233efb6e37242d6a"
     },
     "manuscript/gb_methodology_v3_2026-11-25/scripts/publish_reproducibility_archive.py": {
-      "bytes": 23351,
-      "sha256": "bf01e11756aef3da823c958f0bbfd4239d268c2757935205a5f498d749a8e4fd"
+      "bytes": 18382,
+      "sha256": "2534b7404ec4d367d1e4e0f0c180a836abb6dc64fbd44d0b28fe0c013d6307b0"
     },
     "manuscript/gb_methodology_v3_2026-11-25/Spatial_Colocalization_GB_Methodology_v3.docx": {
-      "bytes": 9199809,
-      "sha256": "0577a1c0f65755baaefc5daf23901984642ce684e35bfe9a80b5df7733ce3d76"
+      "bytes": 9200475,
+      "sha256": "879681a9e6a2a2311773b29854ce4e6a2e469bae745152845c21bba4d27d262b"
     },
     "manuscript/gb_methodology_v3_2026-11-25/SUGGESTED_REVIEWERS_AND_CHECKLIST.md": {
-      "bytes": 5427,
-      "sha256": "156d2c6128a11f95918d7f275d8ca1caf7fae98c0c24710c01989670a37b080e"
+      "bytes": 5445,
+      "sha256": "01a2789134be4418fb02703c8992dc3cca0c75d0f52ac18cd69d8604cbcfae0e"
     },
     "manuscript/gb_methodology_v3_2026-11-25/SUPPLEMENTARY_APPENDIX.md": {
-      "bytes": 20654,
-      "sha256": "8ffcfed9b590a97f8ecff1540b899c1978dd59373161ebcd91554b2abf5b2c5f"
+      "bytes": 20755,
+      "sha256": "c893ef596e3dcbfa897b69e43b488ad52b88fd504217d9a5043c2d6ba1a7e2cb"
     },
     "software/spatial_membership_audit/dist/spatial_membership_audit-3.0.0-py3-none-any.whl": {
-      "bytes": 166317,
-      "sha256": "bd059d68154c3aa8e6b0d4ab7b07b26701062ec3cd99d762a139313d03991e51"
+      "bytes": 159760,
+      "sha256": "7d6851558dcfe6adb39936c42ffeae24d4dd036df4477cf041a3d4ade2084b1c"
     },
     "software/spatial_membership_audit/dist/spatial_membership_audit-3.0.0.tar.gz": {
-      "bytes": 209631,
-      "sha256": "8c3ccad4f75d69a66f79c4400ffad2e84d5285d578effd07db9fe56c29a5d0d1"
+      "bytes": 196476,
+      "sha256": "cf6091bbde5941663396c173cafc90efbec17eb978111f147a99a1b6da152b17"
     }
   }
 }

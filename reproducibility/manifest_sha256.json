@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-27T07:58:13.813248+00:00",
+  "generated_utc": "2026-11-27T08:46:07.562076+00:00",
   "freeze_tag": "v3.0.0-protocol-freeze-20261125",
   "freeze_commit": "aa2ec5f1a8c8d488ad5bb95df8b2331e1b40141e",
   "archive_tag": "v3.0.0-manuscript-archive",
@@ -286,20 +286,20 @@
       "sha256": "84fcd66adc888a7d3a26a08f31fb3cd327d26d06905284a38a57d9fbdb23b66a"
     },
     "manuscript_tables/Additional_file_2_Supplementary_Tables.xlsx": {
-      "bytes": 295571,
-      "sha256": "ed3b2d285bb41cf8dba59a3c5f7ec83460b429cf3b86735eaf70f0d3ba61b208"
+      "bytes": 295866,
+      "sha256": "edce082a5f367c88ec006015125b14fc9c6d834c2662387f3430b9b2d95aa89e"
     },
     "manuscript_tables/EVIDENCE_CROSSWALK.md": {
-      "bytes": 10651,
-      "sha256": "505f61b3ed7f508952c3b7990f23021a920c108647462aa8ff9586b3710d3b74"
+      "bytes": 10707,
+      "sha256": "334e239753ebb9e15f713a41497ab3de50c98b4c93d0a61bd38485873e549d0e"
     },
     "manuscript_tables/ANALYSIS_HISTORY.md": {
-      "bytes": 9369,
-      "sha256": "99d5ceb58ff4235fa12d8af49e29c1d2cd5148e5cd9beac41f2a534da608cc80"
+      "bytes": 9384,
+      "sha256": "6524527f2bf1165530bbb04686c1f65b0c17672c7fff39c2841d4f823d1db490"
     },
     "manuscript_tables/package_verification.json": {
-      "bytes": 15148,
-      "sha256": "27f967a59a870e71d0887e58190921a47d9d652a9f0a6e04e6436986cf61afd1"
+      "bytes": 15339,
+      "sha256": "ff9979a76fe00103eacf9cf97721691f9aa979b5efc7fdc44287434240601fe0"
     }
   }
 }

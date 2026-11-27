@@ -42,9 +42,11 @@ from spatial_membership_audit import (
 
 # Inspect frozen protocol specification
 proto = get_default_protocol_v3()
-assert proto["mode"] == "split_half" and proto["q0"] == 0.75 and proto["n_draws"] == 20
+primary = proto["primary_cross_platform"]
+assert proto["protocol_version"] == "3.0.0"
+assert primary["mode"] == "split_half" and primary["q0"] == 0.75 and primary["n_draws"] == 20
 
-# Zero-inclusive conditional ratio & delta-method MC SE (Proposition 1)
+# Zero-inclusive conditional mean ratio & delta-method MC SE (Proposition 1)
 result = summarize_dua_draws([0, 2, 2], [-1, 1, 1])
 assert abs(result.r_mean - 4 / 3) < 1e-12
 assert abs(result.mc_se_logr - 0.5) < 1e-12
