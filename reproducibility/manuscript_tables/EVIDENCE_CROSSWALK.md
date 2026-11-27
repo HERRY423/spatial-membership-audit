@@ -45,3 +45,9 @@
 - **HNSCC Core 64 Diagnostic:** `review/p6_conclusion_reversal_case_study_2026-11-23/p6c_showcase_summary.json`
 - **Software v3.0.0 & Public Freeze Receipt:** `software/spatial_membership_audit/` (`v3.0.0`, `248 passed, 79 subtests passed`, GitHub tag `v3.0.0-protocol-freeze-20261125`), `review/v3_protocol_freeze_2026-11-25/protocol_freeze_receipt.json`
 - **Cloud Resource Zero-Waste Release Receipt:** `review/v3_linux_competitors_2026-11-25/colab_release_receipt.json` (`No active sessions found on server`, `Active assignments: 0`, `Usage rate: 0.00/hr`, balance `388.38 CU`)
+
+### 6. Peer-Review Methodological Stress Tests (`2026-11-27`, Supplementary Appendix Section S5; `Table_S17`–`Table_S19`)
+- **Table 1–2 `Split-half 2s & 1s` Continuity, `Xenium PR1` Hard-Pruning Inversion Diagnostic, & `1s vs 2s` Simulation Comparison (`Table_S17`):** `review/v3_p1_hardening_2026-11-27/{table12_split_half_curves.json,table12_split_half_rates.json,p1_table1_split_half_continuity.csv,p1_table1_split_half_nulls.csv,p1_table2_cosmx_q025_split_half.csv,p1_1s_vs_2s_and_depth_comparison.csv}`
+- **Fine-Grained `15`-Subtype Real `Wang` TME (`105` pairs, `U = 4,722`), `18`-Subtype Controlled Simulation (`153` pairs), & `1×–40.4×` Gene-Specific Capture Heterogeneity Stress Test (`Table_S18`):** `review/v3_p1_hardening_2026-11-27/{p1_wang_fine15_tme_summary.csv,p1_fine18_sim_availability.csv,p1_fine18_sim_inference.csv,p1_gene_het_stress_test.csv}`
+- **Balanced-vs-Asymmetric `Soft plug-in` Variance-Shrinkage Decomposition & Non-Strawman Native-Posterior Audit (`Table_S19`):** `review/v3_p1_hardening_2026-11-27/p1_soft_variance_decomposition.csv`
+- **Forensic `2026-10-23` Local GEO Header-Only Check Disclosure:** `review/alternative_pair_local_intake_2026-10-23/report.md` (documented explicitly in `ANALYSIS_HISTORY.md`)

@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-27T08:44:23.972379+00:00",
+  "generated_utc": "2026-11-27T13:58:05.181303+00:00",
   "package_dir": "manuscript/gb_methodology_v3_2026-11-25",
   "software_version": "3.0.0",
   "software_freeze_tag": "v3.0.0-protocol-freeze-20261125",
@@ -15,7 +15,7 @@
     "SuppFigure1_m242t_registration_and_imc_qc.png",
     "SuppFigure2_sensitivity_and_conformal_sweeps.png"
   ],
-  "c_drive_free_gb": 3.41,
+  "c_drive_free_gb": 3.4,
   "audits": {
     "abstract_word_count_whitespace": 98,
     "abstract_limit": 100,
@@ -46,8 +46,8 @@
       "w_ntma",
       "w_proseg"
     ],
-    "numerical_cross_checks_total": 32,
-    "numerical_cross_checks_passed": 32,
+    "numerical_cross_checks_total": 42,
+    "numerical_cross_checks_passed": 42,
     "numerical_cross_checks": [
       {
         "name": "Item1_freeze_tag",
@@ -240,34 +240,94 @@
         "source_value": "0.354",
         "expected_substring": "+0.354",
         "passed": true
+      },
+      {
+        "name": "Stress_Wang_r1r2_SH2s_ICC",
+        "source_value": "0.864",
+        "expected_substring": "0.864",
+        "passed": true
+      },
+      {
+        "name": "Stress_Wang_r2y24_SH2s_ICC",
+        "source_value": "0.520",
+        "expected_substring": "0.520",
+        "passed": true
+      },
+      {
+        "name": "Stress_CosMx_PR1_SH2s_red",
+        "source_value": "37.4%",
+        "expected_substring": "+37.4%",
+        "passed": true
+      },
+      {
+        "name": "Stress_CosMx_q025_SH2s_ICC",
+        "source_value": "0.962",
+        "expected_substring": "0.962",
+        "passed": true
+      },
+      {
+        "name": "Stress_CosMx_q025_scVI_ICC",
+        "source_value": "0.892",
+        "expected_substring": "0.892",
+        "passed": true
+      },
+      {
+        "name": "Stress_Fine15_Wang_avail",
+        "source_value": "99.14%",
+        "expected_substring": "99.14%",
+        "passed": true
+      },
+      {
+        "name": "Stress_Fine15_Wang_ICC",
+        "source_value": "0.637",
+        "expected_substring": "0.637",
+        "passed": true
+      },
+      {
+        "name": "Stress_Fine15_Rare_avail",
+        "source_value": "98.68%",
+        "expected_substring": "98.68%",
+        "passed": true
+      },
+      {
+        "name": "Stress_GeneHet_40x_fold",
+        "source_value": "40.4\u00d7",
+        "expected_substring": "40.4\u00d7",
+        "passed": true
+      },
+      {
+        "name": "Stress_GeneHet_40x_offset",
+        "source_value": "0.068",
+        "expected_substring": "0.068",
+        "passed": true
       }
     ]
   },
   "deliverable_count": 38,
   "sha256_manifest": {
     "manuscript/gb_methodology_v3_2026-11-25/Additional_file_1_Supplementary_Information.pdf": {
-      "bytes": 3738044,
-      "sha256": "1bbb4eaf3d27fa60d08ff5239bdba30a74e4a8d6aca474db74eb4ba19b25245d"
+      "bytes": 3745568,
+      "sha256": "46811c180f1b6aff6e5f70703075a5a61f860da98e0d1c8b823f4bbbc20cb5e7"
     },
     "manuscript/gb_methodology_v3_2026-11-25/Additional_file_2_Supplementary_Tables.xlsx": {
-      "bytes": 295866,
-      "sha256": "edce082a5f367c88ec006015125b14fc9c6d834c2662387f3430b9b2d95aa89e"
+      "bytes": 331690,
+      "sha256": "0905da08b030dae115b6457d9f55b80f366567756b2a43f3d590c568a4455b25"
     },
     "manuscript/gb_methodology_v3_2026-11-25/ANALYSIS_HISTORY.md": {
-      "bytes": 9384,
-      "sha256": "6524527f2bf1165530bbb04686c1f65b0c17672c7fff39c2841d4f823d1db490"
+      "bytes": 11482,
+      "sha256": "0cd4a7115a0df2c8df7860598548d5d116b37303ad8b4659ebf26745e8695256"
     },
     "manuscript/gb_methodology_v3_2026-11-25/AUTHOR_SIGNOFF_CHECKLIST.md": {
       "bytes": 4420,
       "sha256": "ec61939422bb258c38ac7b77e358164ae81fb98232235dfd1b19420c5a04577d"
     },
     "manuscript/gb_methodology_v3_2026-11-25/COVER_LETTER_GENOME_BIOLOGY.md": {
-      "bytes": 6113,
-      "sha256": "fb359105fe866c8694ae2b34ae9cd8d899699dad5c57a3de4bc639e4e83c09d3"
+      "bytes": 7035,
+      "sha256": "8c01e79f96a76f2a670c7d1a729a1fadc145a5e9af2d989f05599c9b65903e55"
     },
     "manuscript/gb_methodology_v3_2026-11-25/EVIDENCE_CROSSWALK.md": {
-      "bytes": 10707,
-      "sha256": "334e239753ebb9e15f713a41497ab3de50c98b4c93d0a61bd38485873e549d0e"
+      "bytes": 11960,
+      "sha256": "9d5e3dbd1fdab2e0f7cc42e92785eb284a72543604529dac0462ba8aa46a530b"
     },
     "manuscript/gb_methodology_v3_2026-11-25/figures/Figure1_problem_framework_and_protocol_freeze.pdf": {
       "bytes": 39402,
@@ -319,7 +379,7 @@
     },
     "manuscript/gb_methodology_v3_2026-11-25/figures/SuppFigure1_m242t_registration_and_imc_qc.pdf": {
       "bytes": 3539105,
-      "sha256": "6a801189bd91781d4590c5ac9ea9065ecc295ab7691e54266bc6e61498865157"
+      "sha256": "bdc8634fa76264b5e03026cb2b0e8eddc5bd36d67dbe32d2f673368c5e59f279"
     },
     "manuscript/gb_methodology_v3_2026-11-25/figures/SuppFigure1_m242t_registration_and_imc_qc.png": {
       "bytes": 3349392,
@@ -335,23 +395,23 @@
     },
     "manuscript/gb_methodology_v3_2026-11-25/github_archive_receipt.json": {
       "bytes": 633,
-      "sha256": "d2c2b8d56b3f2a665f4630e2cc9ac970f7415f1393c649bb0c6aa8457ebc4871"
+      "sha256": "37bc55f812fd804d52b894bcb8ce9649324b6b0fecc432d824ebbc94b03cafe7"
     },
     "manuscript/gb_methodology_v3_2026-11-25/MANUSCRIPT_GB_METHODOLOGY_v3.md": {
-      "bytes": 117398,
-      "sha256": "bd93354eee483abbab31ba51957817bc397c91bd924d46d4b8c3d5f5d903dd8d"
+      "bytes": 133092,
+      "sha256": "dec35715d4eb6aad57cd80b0f2caf2bbffb00e473909b9c5640d46f875789808"
     },
     "manuscript/gb_methodology_v3_2026-11-25/PRESUBMISSION_ENQUIRY.md": {
-      "bytes": 7652,
-      "sha256": "c785a6ae4bf1b20cbdc53807313ad1f969ae8bee8d657af3b5b4fe66dc514e65"
+      "bytes": 8428,
+      "sha256": "cb5451e7fe6aab5fb1230dddf6050beca659fc3ca8c9e9578f64d839666aa3a4"
     },
     "manuscript/gb_methodology_v3_2026-11-25/scripts/build_additional_files_v3.py": {
-      "bytes": 20606,
-      "sha256": "3ccca7d06d1fff787061cfaff318ea59425fb15072eb36d613fa79e0b581de54"
+      "bytes": 22254,
+      "sha256": "cf920f067c91fae7c6996dbbb7f3499d0a75fc69c877de351ab1555e218e96a8"
     },
     "manuscript/gb_methodology_v3_2026-11-25/scripts/build_docx_and_verify_v3.py": {
-      "bytes": 37864,
-      "sha256": "577ea3d151423ece184edd173d40f562974ff14125edee8ab5da46bca68ce83a"
+      "bytes": 40170,
+      "sha256": "59c8aa8d827a875e1beab135d3a58c7df3877f273247bfa2ebf5907184979aa7"
     },
     "manuscript/gb_methodology_v3_2026-11-25/scripts/build_fig3.py": {
       "bytes": 23746,
@@ -374,20 +434,20 @@
       "sha256": "3071060b87a55ddc988d0a069858e1dfe6290c3c2577210c233efb6e37242d6a"
     },
     "manuscript/gb_methodology_v3_2026-11-25/scripts/publish_reproducibility_archive.py": {
-      "bytes": 18382,
-      "sha256": "2534b7404ec4d367d1e4e0f0c180a836abb6dc64fbd44d0b28fe0c013d6307b0"
+      "bytes": 20456,
+      "sha256": "988cde9c780396fccd2a65a5caf381272b071e88cefdd0cf7b431e3673ef282a"
     },
     "manuscript/gb_methodology_v3_2026-11-25/Spatial_Colocalization_GB_Methodology_v3.docx": {
-      "bytes": 9200475,
-      "sha256": "879681a9e6a2a2311773b29854ce4e6a2e469bae745152845c21bba4d27d262b"
+      "bytes": 9210137,
+      "sha256": "75b3205b20abb109fa86b6947108ff815cc4c16a13211a2a88c80238681c8b1c"
     },
     "manuscript/gb_methodology_v3_2026-11-25/SUGGESTED_REVIEWERS_AND_CHECKLIST.md": {
-      "bytes": 5445,
-      "sha256": "01a2789134be4418fb02703c8992dc3cca0c75d0f52ac18cd69d8604cbcfae0e"
+      "bytes": 5606,
+      "sha256": "8d728e906474dd28377a2fe7bb0737fddbed60f8b1ecdd29d4b0cfbe2c2300b0"
     },
     "manuscript/gb_methodology_v3_2026-11-25/SUPPLEMENTARY_APPENDIX.md": {
-      "bytes": 20755,
-      "sha256": "c893ef596e3dcbfa897b69e43b488ad52b88fd504217d9a5043c2d6ba1a7e2cb"
+      "bytes": 25606,
+      "sha256": "114b6d2fffa26b6ad685cda71faf7abd3b9ddf750ac2dcf8417d7662ff110616"
     },
     "software/spatial_membership_audit/dist/spatial_membership_audit-3.0.0-py3-none-any.whl": {
       "bytes": 159760,

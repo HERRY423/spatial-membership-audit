@@ -1,0 +1,7 @@
+benchmark,scope,arm,u_common_n,comp_icc,comp_pearson_r,comp_mae,comp_med_disc,comp_red_pct,comp_red_ci_lo,comp_red_ci_hi,truth1_icc,truth1_spearman_rho,truth1_mae,truth2_spearman_rho,truth2_mae,sd_ratio_deep,sd_ratio_shal
+CosMx_Breast_X3c_q025,POOLED_54FOVs,Split_half_2s_default,152,0.9623,0.966,0.0583,0.0404,74.27,65.11,81.31,0.1187,0.3767,0.4258,0.4568,0.2912,0.745,0.951
+CosMx_Breast_X3c_q025,POOLED_54FOVs,Split_half_1s,152,0.9278,0.9312,0.0876,0.0579,63.14,50.26,71.8,0.229,0.4499,0.3925,0.5007,0.2697,0.764,1.0
+CosMx_Breast_X3c_q025,Patient_BR1_4066_27FOVs,Split_half_2s_default,81,0.9656,0.9679,0.0608,0.0418,62.19,40.68,77.55,0.5036,0.6513,0.3021,0.6059,0.2539,0.846,0.961
+CosMx_Breast_X3c_q025,Patient_BR1_4066_27FOVs,Split_half_1s,81,0.9549,0.9556,0.0795,0.0567,48.76,16.17,61.18,0.5438,0.6501,0.2912,0.6093,0.2487,0.879,1.0
+CosMx_Breast_X3c_q025,Patient_BR2_4399_27FOVs,Split_half_2s_default,71,0.9024,0.9214,0.0555,0.04,84.91,68.97,88.43,-0.2294,0.1994,0.567,0.222,0.3336,0.39,0.768
+CosMx_Breast_X3c_q025,Patient_BR2_4399_27FOVs,Split_half_1s,71,0.8069,0.8347,0.0968,0.0642,75.82,49.88,83.72,-0.0668,0.3168,0.5081,0.3273,0.2936,0.465,1.0

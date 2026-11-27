@@ -8,7 +8,7 @@ This directory archives all lightweight derived tables, native Linux execution s
 
 - **Immutable pre-fetch freeze tag:** `v3.0.0-protocol-freeze-20261125` (commit `aa2ec5f1a8c8d488ad5bb95df8b2331e1b40141e`, UTC `2026-11-25T14:12:08Z`).
 - **Zero code drift:** All package source files (`src/`), tests (`tests/`), and frozen protocol definitions (`protocol/`) in this archive tag are **byte-for-byte identical** to `v3.0.0-protocol-freeze-20261125`.
-- **Verify all `74` archive files in <1 second:**
+- **Verify all `93` archive files in <1 second:**
   ```bash
   python reproducibility/verify_archive_checksums.py
   ```
@@ -29,5 +29,6 @@ This directory archives all lightweight derived tables, native Linux execution s
 | `data/v3_classifier_independence_2026-11-25/` | `InSituType 2.0` & `CellTypist 1.7.1` cross-platform TMA & M242T IMC replications and scripts |
 | `data/v3_35core_decomposition_2026-11-25/` | 35-core negative probe reproduction, 6-gene marker-sparsity diagnostics, 60-cell 3-factor ablation, and scripts |
 | `data/p7_dua_theory_and_audit_2026-11-23/` | Finite-sample Proposition 1–3, split-conformal, and `1/sqrt(d)` MITM empirical verification tables |
-| `manuscript_tables/` | Multi-sheet `Additional_file_2_Supplementary_Tables.xlsx`, `EVIDENCE_CROSSWALK.md`, `ANALYSIS_HISTORY.md`, and `package_verification.json` |
+| `data/v3_p1_hardening_2026-11-27/` | Table 1–2 `Split-half 2s/1s` continuity & `Xenium PR1` hard-pruning diagnostic, fine-grained 15-subtype real `Wang` TME (`105` pairs) & 18-subtype simulation (`153` pairs), `1x–40.4x` gene-heterogeneity stress test, and balanced-vs-asymmetric `Soft` / native-posterior variance decomposition |
+| `manuscript_tables/` | Multi-sheet `Additional_file_2_Supplementary_Tables.xlsx` (`README_Index` + `Table_S1`–`Table_S19`, 20 sheets), `EVIDENCE_CROSSWALK.md`, `ANALYSIS_HISTORY.md`, and `package_verification.json` |
 | `figure_scripts/` | Publication figure scripts (`Figures 1–6` & `Supplementary Figures 1–2`) |

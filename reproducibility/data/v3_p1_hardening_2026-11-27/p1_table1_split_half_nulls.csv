@@ -1,0 +1,5 @@
+benchmark,arm,u_common_n,pan_n_tests,pan_paired_t_fdr_n,pan_paired_t_fdr_pct,pan_wilcoxon_fdr_n,pan_wilcoxon_fdr_pct,within_cancer_n_tests,within_cancer_paired_t_fdr_n,within_cancer_paired_t_fdr_pct,within_cancer_wilcoxon_fdr_pct,disjoint_50_50_n_tests,disjoint_50_50_welch_fdr_pct
+Wang_HTMA_r1_vs_r2,Split_half_2s_default,490,10,4,40.0,4,40.0,53,0,0.0,0.0,10,2.0
+Wang_HTMA_r1_vs_r2,Split_half_1s,490,10,5,50.0,5,50.0,53,0,0.0,0.0,10,2.5
+Wang_HTMA_r2_vs_y24,Split_half_2s_default,391,15,0,0.0,0,0.0,75,0,0.0,0.0,15,0.0
+Wang_HTMA_r2_vs_y24,Split_half_1s,391,15,0,0.0,0,0.0,75,0,0.0,0.0,15,0.0

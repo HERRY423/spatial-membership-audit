@@ -1,0 +1,122 @@
+{
+  "Wang_HTMA_r1_vs_r2": {
+    "side_a": "r1",
+    "side_b": "r2",
+    "split_half_2s": {
+      "q_a": 0.75,
+      "q_b": 0.1,
+      "target_psi": 0.5820357399999998,
+      "noisier_side": "A",
+      "clamped": true,
+      "effective_ratio": 0.13333333333333333
+    },
+    "split_half_1s": {
+      "q_a": 1.0,
+      "q_b": 0.1,
+      "target_psi": 0.5820357399999998,
+      "noisier_side": "A",
+      "clamped": true,
+      "effective_ratio": 0.1
+    }
+  },
+  "Wang_HTMA_r2_vs_y24": {
+    "side_a": "r2",
+    "side_b": "y24",
+    "split_half_2s": {
+      "q_a": 0.1,
+      "q_b": 0.75,
+      "target_psi": 0.5854964488888889,
+      "noisier_side": "B",
+      "clamped": true,
+      "effective_ratio": 0.13333333333333333
+    },
+    "split_half_1s": {
+      "q_a": 0.1,
+      "q_b": 1.0,
+      "target_psi": 0.5854964488888889,
+      "noisier_side": "B",
+      "clamped": true,
+      "effective_ratio": 0.1
+    }
+  },
+  "Touchstone_Xenium_PR1": {
+    "side_a": "GSM8513829_STJ",
+    "side_b": "GSM8513837_WCM",
+    "split_half_2s": {
+      "q_a": 0.1,
+      "q_b": 0.75,
+      "target_psi": 0.0891296288888889,
+      "noisier_side": "B",
+      "clamped": true,
+      "effective_ratio": 0.13333333333333333
+    },
+    "split_half_1s": {
+      "q_a": 0.1,
+      "q_b": 1.0,
+      "target_psi": 0.0891296288888889,
+      "noisier_side": "B",
+      "clamped": true,
+      "effective_ratio": 0.1
+    }
+  },
+  "Touchstone_CosMx_PR1": {
+    "side_a": "GSM8513808_STJ",
+    "side_b": "GSM8513827_WCM",
+    "split_half_2s": {
+      "q_a": 0.32311012036226666,
+      "q_b": 0.75,
+      "target_psi": 0.71166796,
+      "noisier_side": "B",
+      "clamped": false,
+      "effective_ratio": 0.43081349381635553
+    },
+    "split_half_1s": {
+      "q_a": 0.4178110090099641,
+      "q_b": 1.0,
+      "target_psi": 0.68596219,
+      "noisier_side": "B",
+      "clamped": false,
+      "effective_ratio": 0.4178110090099641
+    }
+  },
+  "CosMx_Breast_q025_BR1": {
+    "side_a": "GSM8513809_deep",
+    "side_b": "GSM8513809_shallow25",
+    "split_half_2s": {
+      "q_a": 0.16721161693330028,
+      "q_b": 0.75,
+      "target_psi": 0.4793303,
+      "noisier_side": "B",
+      "clamped": false,
+      "effective_ratio": 0.2229488225777337
+    },
+    "split_half_1s": {
+      "q_a": 0.2286762257321028,
+      "q_b": 1.0,
+      "target_psi": 0.45063387,
+      "noisier_side": "B",
+      "clamped": false,
+      "effective_ratio": 0.2286762257321028
+    }
+  },
+  "CosMx_Breast_q025_BR2": {
+    "side_a": "GSM8513811_deep",
+    "side_b": "GSM8513811_shallow25",
+    "split_half_2s": {
+      "q_a": 0.16292584399657245,
+      "q_b": 0.75,
+      "target_psi": 0.65326701,
+      "noisier_side": "B",
+      "clamped": false,
+      "effective_ratio": 0.2172344586620966
+    },
+    "split_half_1s": {
+      "q_a": 0.23434395107038264,
+      "q_b": 1.0,
+      "target_psi": 0.62047846,
+      "noisier_side": "B",
+      "clamped": false,
+      "effective_ratio": 0.23434395107038264
+    }
+  }
+}

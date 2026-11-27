@@ -1,0 +1,8 @@
+benchmark,scope,arm,d0_n,u_common_n,eval_n,raw_avail_n,raw_avail_pct,icc,pearson_r,spearman_rho,mae,med_disc,red_pct,sd_ratio_a,sd_ratio_b,bio_eta2_a,bio_eta2_b,ci_lo_tma_block,ci_hi_tma_block,clamped,q_a,q_b,ci_lo_spatial_block,ci_hi_spatial_block
+Wang_HTMA_r1_vs_r2,eval_53cores_12blocks,Split_half_2s_default,745,490,490,745,100.0,0.8639,0.871,0.8284,0.1351,0.0909,53.87,0.92,0.544,0.1206,0.1252,33.45,67.4,True,0.75,0.1,,
+Wang_HTMA_r1_vs_r2,eval_53cores_12blocks,Split_half_1s,745,490,490,745,100.0,0.8144,0.833,0.7877,0.1639,0.1109,43.68,1.0,0.544,0.1277,0.1252,16.97,62.35,True,1.0,0.1,,
+Wang_HTMA_r2_vs_y24,eval_30cores_9blocks,Split_half_2s_default,391,391,391,391,100.0,0.5202,0.5799,0.4583,0.2316,0.1428,51.62,0.487,0.956,0.19,0.277,32.56,68.32,True,0.1,0.75,,
+Wang_HTMA_r2_vs_y24,eval_30cores_9blocks,Split_half_1s,391,391,391,391,100.0,0.5039,0.5743,0.4657,0.2468,0.159,46.13,0.487,1.0,0.19,0.2577,26.32,62.35,True,0.1,1.0,,
+Touchstone_Xenium_PR1,85grids_28blocks,Split_half_2s_unfallback_clamped,113,113,5,5,4.42,-0.0858,0.067,0.2,1.4249,1.4106,-177.8,1.9,0.434,,,,,True,0.1,0.75,,
+Touchstone_CosMx_PR1,77grids_24blocks,Split_half_2s_default,416,415,415,415,99.76,0.0728,0.1829,0.2137,0.4604,0.316,37.36,0.542,0.728,,,,,False,0.32311012036226666,0.75,25.72,46.76
+Touchstone_CosMx_PR1,77grids_24blocks,Split_half_1s,416,415,415,416,100.0,0.0296,0.2346,0.1946,0.6706,0.4875,3.36,0.577,1.0,,,,,False,0.4178110090099641,1.0,-7.07,12.54
