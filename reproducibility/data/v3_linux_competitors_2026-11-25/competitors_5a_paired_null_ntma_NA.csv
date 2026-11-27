@@ -1,0 +1,12 @@
+track,tool,metric,arm,u_common_n,pan_paired_t_fdr_pct,pan_wilcoxon_fdr_pct,within_group_paired_t_fdr_pct,disjoint_50_50_welch_fdr_pct
+nTMA_TrackNA_Xenium_CosMx,spicyR,L_r25,Naive,585,26.666666666666668,40.0,0.0,0.6666666666666667
+nTMA_TrackNA_Xenium_CosMx,spicyR,L_r25,Split_half_2s_default,585,26.666666666666668,40.0,0.0,1.0
+nTMA_TrackNA_Xenium_CosMx,spicyR,L_r25,Split_half_2s_B1,585,13.333333333333334,40.0,0.0,0.6666666666666667
+nTMA_TrackNA_Xenium_CosMx,CRAWDAD,Z_scale100,Naive,569,46.666666666666664,26.666666666666668,0.0,0.33333333333333337
+nTMA_TrackNA_Xenium_CosMx,CRAWDAD,Z_scale100,Split_half_2s_default,569,46.666666666666664,46.666666666666664,0.0,4.0
+nTMA_TrackNA_Xenium_CosMx,CRAWDAD,Z_scale100,Split_half_2s_B1,569,13.333333333333334,13.333333333333334,0.0,3.0000000000000004
+nTMA_TrackNA_Xenium_CosMx,CRAWDAD,meanZ_multiscale,Naive,571,53.333333333333336,40.0,0.0,0.6666666666666667
+nTMA_TrackNA_Xenium_CosMx,CRAWDAD,meanZ_multiscale,Split_half_2s_default,571,46.666666666666664,46.666666666666664,0.0,6.0
+nTMA_TrackNA_Xenium_CosMx,PANORAMIC,local_comp_enrichment_r25,Naive,550,6.666666666666667,20.0,0.0,2.0
+nTMA_TrackNA_Xenium_CosMx,PANORAMIC,local_comp_enrichment_r25,Split_half_2s_default,550,6.666666666666667,33.33333333333333,0.0,1.0
+nTMA_TrackNA_Xenium_CosMx,PANORAMIC,local_comp_enrichment_r25,Split_half_2s_B1,550,6.666666666666667,26.666666666666668,0.0,1.3333333333333335

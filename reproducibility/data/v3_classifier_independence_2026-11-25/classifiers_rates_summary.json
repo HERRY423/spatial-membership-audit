@@ -1,0 +1,38 @@
+{
+  "tTMA1_TrackA_Xenium_CosMx_IF__InSituType": {
+    "q_a": 0.11905678844962203,
+    "q_b": 0.75,
+    "target_psi": 0.52839229,
+    "noisier": "B"
+  },
+  "tTMA1_TrackA_Xenium_CosMx_IF__CellTypist": {
+    "q_a": 0.1,
+    "q_b": 0.75,
+    "target_psi": 0.6121396028831768,
+    "noisier": "B"
+  },
+  "tTMA1_TrackB_Xenium_MERSCOPE__InSituType": {
+    "q_a": 0.23277603398238308,
+    "q_b": 0.75,
+    "target_psi": 0.39499593,
+    "noisier": "B"
+  },
+  "tTMA1_TrackB_Xenium_MERSCOPE__CellTypist": {
+    "q_a": 0.4238359500637468,
+    "q_b": 0.75,
+    "target_psi": 0.4434374884169169,
+    "noisier": "B"
+  },
+  "nTMA_TrackNA_Xenium_CosMx_IF__InSituType": {
+    "q_a": 0.1,
+    "q_b": 0.75,
+    "target_psi": 0.5969074577777778,
+    "noisier": "B"
+  },
+  "nTMA_TrackNA_Xenium_CosMx_IF__CellTypist": {
+    "q_a": 0.1,
+    "q_b": 0.75,
+    "target_psi": 0.5862258068830839,
+    "noisier": "B"
+  }
+}

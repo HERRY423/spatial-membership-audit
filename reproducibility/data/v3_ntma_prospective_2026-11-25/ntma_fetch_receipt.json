@@ -1,0 +1,101 @@
+{
+  "protocol_version": "3.0.0",
+  "frozen_protocol": {
+    "protocol_version": "3.0.0",
+    "primary_cross_platform": {
+      "mode": "split_half",
+      "pairing": "both",
+      "q0": 0.75,
+      "n_draws": 20,
+      "split_half_grid": [
+        1.0,
+        0.85,
+        0.75,
+        0.65,
+        0.5,
+        0.35,
+        0.25,
+        0.15,
+        0.1
+      ],
+      "split_half_max_cells": 10000,
+      "split_half_reps": 3,
+      "split_half_enforce_monotone": true,
+      "split_half_min_q": 0.05,
+      "ratio_estimator": "zero_inclusive_mean_o_over_mean_e",
+      "availability_threshold": 0.9,
+      "inference": "synchronized_joint_permutation",
+      "n_permutations_cohort": 199,
+      "n_permutations_single_unit": 999,
+      "pvalue_formula": "phipson_smyth_plus_one",
+      "radius_um": 25.0
+    },
+    "secondary_moderate_gap": {
+      "mode": "mitm",
+      "mitm_mode": "geometric",
+      "extrap_method": "hier_eb",
+      "extrap_scale": "inv_sqrtd",
+      "ladder_qs": [
+        1.0,
+        0.85,
+        0.75,
+        0.65,
+        0.5
+      ],
+      "min_median_depth": 2.0,
+      "recommended_min_median_depth": 25.0,
+      "max_cond_flip_rate": 0.45,
+      "fallback_mode": "rarefaction"
+    },
+    "single_specimen_map": {
+      "mode": "stability_weighted",
+      "stability_q": 0.75,
+      "stability_power": 1.0,
+      "n_draws": 20
+    }
+  },
+  "freeze_tag": "v3.0.0-protocol-freeze-20261125",
+  "freeze_tag_utc": "2026-11-25T14:12:08Z",
+  "files": {
+    "2023_xenium_breast_nTMA.h5ad": {
+      "name": "2023_xenium_breast_nTMA.h5ad",
+      "started_utc": "2026-11-26T15:41:02Z",
+      "finished_utc": "2026-11-26T15:42:00Z",
+      "postdates_freeze_tag": true,
+      "freeze_tag_utc": "2026-11-25T14:12:08Z",
+      "range_bytes": 31556485,
+      "range_sha256": "ebac720faf5b6444fe8910859ac5966fbc62083009ad0efb896ddc06339c7064",
+      "seconds": 58.15
+    },
+    "2023_cosmx_multitissue_nTMA.h5ad": {
+      "name": "2023_cosmx_multitissue_nTMA.h5ad",
+      "started_utc": "2026-11-26T15:42:00Z",
+      "finished_utc": "2026-11-26T15:42:58Z",
+      "postdates_freeze_tag": true,
+      "freeze_tag_utc": "2026-11-25T14:12:08Z",
+      "range_bytes": 31995562,
+      "range_sha256": "3953281ca56a1325e05ce4ff3ad143bff7c4340d0e83012684f0709ca394743f",
+      "seconds": 58.82
+    },
+    "2023_merscope_breast_nTMA.h5ad": {
+      "name": "2023_merscope_breast_nTMA.h5ad",
+      "started_utc": "2026-11-26T15:42:58Z",
+      "finished_utc": "2026-11-26T15:43:23Z",
+      "postdates_freeze_tag": true,
+      "freeze_tag_utc": "2026-11-25T14:12:08Z",
+      "range_bytes": 13299463,
+      "range_sha256": "2f1629c9ec49fe73ac12173a7f6a593c4b0b8951f5880ad79b75c263fd7b9359",
+      "seconds": 24.59
+    },
+    "2023_xenium_panhuman_nTMA.h5ad": {
+      "name": "2023_xenium_panhuman_nTMA.h5ad",
+      "started_utc": "2026-11-26T15:43:23Z",
+      "finished_utc": "2026-11-26T15:44:17Z",
+      "postdates_freeze_tag": true,
+      "freeze_tag_utc": "2026-11-25T14:12:08Z",
+      "range_bytes": 29575276,
+      "range_sha256": "e84a8bb6272f37ab3df57cde4d7006819899359bb2052de588dbc949d598c8c2",
+      "seconds": 53.76
+    }
+  }
+}

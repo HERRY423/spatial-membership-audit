@@ -1,116 +1,81 @@
-# Spatial Membership Audit (`v3.0.0`)
+# `spatial-membership-audit` (v3.0.0)
 
-`spatial-membership-audit` standardizes cell-type spatial colocalization across imaging runs, centers, gene panels, and platforms under a single frozen default protocol (`DEFAULT_PROTOCOL_V3`):
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
+[![Protocol Freeze](https://img.shields.io/badge/protocol--freeze-v3.0.0--20261125-1E8449.svg)](https://github.com/HERRY423/spatial-membership-audit/releases/tag/v3.0.0-protocol-freeze-20261125)
 
-1. **Frozen Primary Default — Conditional split-half coverage matching (`mode="split_half"`, `coverage_matching.py`)**: Two-sided (`q0=0.75`, `B=20`, 9-point probe grid `1.00..0.10`, up to `10,000` stratified cells × `3` reps, PAVA monotone curve, `[0.05, 1.00]` bounds) zero-inflation-invariant Poisson split-half alignment with zero-inclusive ratio estimation (`mean(O_b)/mean(E_b)`) and synchronized joint-permutation DUA inference (`joint_perm_pairs_from_draws`).
-2. **Optional Secondary (moderate depth gaps `<= 6-7x`) — Meet-in-the-Middle Rarefaction–Extrapolation (`mode="mitm"`, `extrapolation.py`)**: Within-run `1/sqrt(d)` hierarchical Empirical Bayes extrapolation to `d* = sqrt(s_A * s_B)` with automatic low-depth / high-flip guardrails.
-3. **Single-Specimen Architectural Map — Native-depth stability weighting (`mode="stability_weighted"`, `stability_weighting.py`)**: Closed-form `O(M)` weighted fixed-margin permutation moments (`w_i = 1 - f_i`) preserving full native transcript depth without thinning.
-4. **Threshold-free depth-only rarefaction (`depth_matching.py`) & three-regime DUA inference (`dua_inference.py`)**: Post-QC positive-median alignment (`q_k = q_0 * min(s_A, s_B)/s_k`) and separation of fixed-input Monte Carlo precision (`mc_se_logr`), synchronized spatial permutation nulls (`z_dua`, `permutation_p_z`), and distribution-free split-conformal repeat bands (`conformal_prediction_band`).
-5. **scverse / Squidpy high-level API (`standardize.py`)**: `standardize_colocalization_anndata` defaults directly to `DEFAULT_PROTOCOL_V3` (`mode="split_half"`) and exports `to_squidpy_nhood_enrichment()` matrices (see [protocol/FROZEN_DEFAULT_PROTOCOL_v3.0.md](protocol/FROZEN_DEFAULT_PROTOCOL_v3.0.md) and [tutorials/v2_scverse_standardization.md](tutorials/v2_scverse_standardization.md)).
+**Rarefaction–extrapolation standardization of cell-type colocalization across imaging spatial transcriptomics platforms.**
 
-Core numerical dependencies are strictly **NumPy** and **SciPy**; optional extras (`[io]`, `[scverse]`, `[validation]`) add `AnnData`/`Squidpy` and cohort analysis tooling. Licensed under the MIT License (see [LICENSE](LICENSE)).
+`spatial-membership-audit` implements a publicly frozen two-estimand standardization framework (`DEFAULT_PROTOCOL_V3`) for cell-type colocalization across heterogeneous imaging spatial transcriptomics (iST) instruments (10x Xenium, NanoString CosMx, Vizgen MERSCOPE, MERFISH+), gene panels, storage durations, upstream resegmentation (`Proseg`), downstream spatial tools (`Squidpy`, `spicyR`, `CRAWDAD`, `PANORAMIC`), and classifiers (`SingleR`, `InSituType`, `CellTypist`).
+
+---
+
+## Frozen Two-Estimand Framework (`DEFAULT_PROTOCOL_V3`)
+
+| Operational Regime | Estimand | Method in `spatial-membership-audit` | Key Properties |
+|---|---|---|---|
+| **Regime 1 (Primary Default)** | Cross-cohort & cross-platform comparability | `mode="split_half"` (`q0=0.75`, `pairing="both"`, `B=20`) + `joint_perm_pairs_from_draws` | Unsupervised conditional Poisson split-half coverage matching (Props. 1–3); zero paired training samples; eliminates SNR & depth-driven false discoveries. |
+| **Regime 2 (Optional Secondary)** | Moderate depth gaps (`<= 6–7x`) balancing comparability & native fidelity | `mode="mitm"` (`mitm_mode="geometric"`, `1/sqrt(d)` EB + low-depth guardrail) | Preserves 82–90% deep contrast & orthogonal protein fidelity; automatically falls back to rarefaction when starved. |
+| **Regime 3 (Single Specimen)** | Single-specimen architectural mapping | `mode="stability_weighted"` (`w_i = 1 - f_i`, unthinned) | Closed-form `O(M)` weighted fixed-margin permutation moments; zero discarded molecules; improves protein IF concordance. |
+| **Regime 4 (Sparsity Guardrail)** | Extreme sparsity (`< 20–25` tx/cell, `> 10x` gap, or `boundary_clamped=True`) | Automatic guardrail fallback + explicit diagnostic flags | Prevents upward extrapolation collapse and flags lower-bound clamping transparently. |
+
+Core runtime dependencies are strictly **NumPy** and **SciPy**; optional extras (`[io]`, `[scverse]`, `[validation]`) add `AnnData`/`Squidpy` and cohort analysis tooling.
+
+---
+
+## Installation & Quickstart
+
+```bash
+pip install git+https://github.com/HERRY423/spatial-membership-audit.git
+# Optional scverse / AnnData integration:
+pip install "spatial-membership-audit[scverse] @ git+https://github.com/HERRY423/spatial-membership-audit.git"
+```
+
+### Minimal Example
 
 ```python
-from spatial_membership_audit import summarize_dua_draws, standardize_colocalization_anndata
+from spatial_membership_audit import (
+    get_default_protocol_v3,
+    summarize_dua_draws,
+    standardize_colocalization_anndata,
+)
 
+# Inspect frozen protocol specification
+proto = get_default_protocol_v3()
+assert proto["mode"] == "split_half" and proto["q0"] == 0.75 and proto["n_draws"] == 20
+
+# Zero-inclusive conditional ratio & delta-method MC SE (Proposition 1)
 result = summarize_dua_draws([0, 2, 2], [-1, 1, 1])
 assert abs(result.r_mean - 4 / 3) < 1e-12
 assert abs(result.mc_se_logr - 0.5) < 1e-12
 ```
 
-Install the wheel in a Python 3.10+ environment. Run `python -m pytest tests -q` from the source distribution after installing the package and the test dependencies. Run `python -m build --no-isolation` to rebuild the source and wheel archives.
+See [tutorials/v2_scverse_standardization.md](tutorials/v2_scverse_standardization.md) and [protocol/FROZEN_DEFAULT_PROTOCOL_v3.0.md](protocol/FROZEN_DEFAULT_PROTOCOL_v3.0.md) for full `AnnData`/`Squidpy` workflows (`to_squidpy_nhood_enrichment()`).
+
+### Running the Test Suite (`248 passed, 79 subtests passed`)
+
+```bash
+PYTHONPATH=src OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python -m pytest tests -q
+```
 
 ---
 
-## Historical Development Log (`0.2.0` -> `1.0.0`)
+## Manuscript Reproducibility & Protocol Freeze Audit
 
-2026-11-01 新增[逐基因双向匹配](DEPTH_MATCHING.md)：每基因只稀释观测均值较高的一侧，并提供 beta-binomial 直方图敏感性接口。原四对切片的配对内零比例/方差改善在固定 rho 网格保持，固定校准参数迁移仍未通过联合要求；见[结果与边界](../../review/bidirectional_matching_2026-11-01/REPORT.md)。均值相等是拟合恒等式；过离散接口尚未覆盖空间 P+、O/E、CV 或假阳性率。旧运行及函数默认行为保留。
+To separate pre-specified prospective validation from manuscript reporting:
 
-2026-11-01 D 数值更正：修复混合类别节点在快速路径条件不满足时被漏算的问题；旧 `RESOLVED` 也可能受影响。E5 的1,510条异常和另外1,221条受影响旧成功记录单独复核，原运行保留。使用范围、修复机制及历史结果边界见[直接CV说明](DIRECT_CV.md)与[复核报告](../../review/gb_sprint_E5_numeric_repair_2026-11-01/REPORT.md)。
+1. **Immutable Pre-Fetch Protocol Freeze Tag:** [`v3.0.0-protocol-freeze-20261125`](https://github.com/HERRY423/spatial-membership-audit/releases/tag/v3.0.0-protocol-freeze-20261125) (commit `aa2ec5f1a8c8d488ad5bb95df8b2331e1b40141e`, UTC `2026-11-25T14:12:08Z`, `protocol/protocol_v3_default.json` SHA-256 `468de661fb885938a396e9a536ba90ca6f36b5a6ceab2c279a08cd7c682e9459`) was tagged **prior to fetching** the independent `Wang 2025 nTMA` 15-organ normal tissue microarray (`2026-11-26T15:41:02Z–15:44:17Z`).
+2. **Manuscript Reproducibility Archive (`reproducibility/`, tag `v3.0.0-manuscript-archive`):** Adds **zero changes** to `src/`, `tests/`, or `protocol/` relative to the freeze tag, and bundles:
+   - All derived `U_common` CSV summaries, `2,880`-cohort controlled simulation tables, native Linux `Proseg v3.2.0` / `spicyR 1.22.0` / `CRAWDAD 1.0.1` / `PANORAMIC 0.99.4` benchmarks, `InSituType 2.0` & `CellTypist 1.7.1` replications, prospective `Wang 2025 nTMA` outputs, `35`-core 3-factor ablation tables, and archived `S4` sensitivity sweeps (`reproducibility/data/`);
+   - Native Linux environment manifest (`env_versions.json`), protocol freeze receipt, post-freeze nTMA UTC fetch receipt, and SHA-256 verification script (`python reproducibility/verify_archive_checksums.py`);
+   - Figure-generation scripts (`reproducibility/figure_scripts/`).
 
-冻结逐细胞分类器入口：[AnnData完整教程](tutorials/frozen_classifier_anndata.md)与[可运行脚本](examples/frozen_classifier_anndata.py)。教程使用合成计数和预先固定的线性模型，演示MC来源与误差边界、基因特异保留率、自定义callable和保存读回；不下载或训练模型。
+---
 
-2026-11-01 E4 接口修复：AnnData结果逐保留率保留分类器MC来源、draws/seed及误差适用范围，抽样零保留为未解，不再据此标为结构不可能；保留原图引擎的条件状态，整体MC输出不冒充端到端认证。单个基因特异p向量可运行并保存基因顺序，`p_grid`明确仅接受标量序列。字段与保存位置见[空间诊断指南](ACTIONABLE_GUIDE.md)，原失败和修复测试见[修复记录](../../review/gb_sprint_E4_repair_2026-11-01/REPORT.md)。本轮是局部工程修复，未发布新版本。
+## Documentation & License
 
-2026-10-31 修复与重评：[空间诊断指南](ACTIONABLE_GUIDE.md)明确默认分界值仅为报告约定。R 使用共享基因联合状态概率及正确的条件联合矩，ratio CV 保留一阶 Delta 近似标签；SpatialData 请求的坐标转换失败时明确报错；自定义分类器须显式确认逐细胞假设，有限检查不构成独立性证明。D 释放不再使用的大数组并恢复逐阶计时，固定全片六配对已重建原始运行记录。旧版、内存失败及首次测试超时均保留在[本轮修复目录](../../review/three_issue_resolution_2026-10-31/)。Python 标准对象接口有本地测试；本机未安装 GiottoClass，原生 R/Giotto 宿主验收未运行。1,728 条既有轨迹的诊断分类不构成门槛或生物学效用验证。本轮改变了源代码，未发布新版本。
-
-2026-10-28 新增实验性[Auto-Routing](AUTO_ROUTING.md)：显式区分条件数值包围与近似筛查，支持D、scrambled Sobol及超过Sobol维度限制时的MC。K阈值仅为可配置启发式，采样置信度尚未校准；不会将采样结果标成D证书。原接口和历史证据保持，未验证组合性能或发布新版本。
-
-2026-10-26 新增[完整端点扰动分布](ENDPOINT_DISTRIBUTION.md)：小状态精确联合枚举＋大规模完整经验轨迹，覆盖O/E、两种置换分数、co-occurrence、K/L（none/translation）和双向G；36项检查、228项实际原生小例对照通过。20组真实输入保留576份分布、104,064条端点状态及六FOV的2,160条缺几何K/L。嵌套精确置换另限每尺度15边及状态预算；经验近似不认证稀有尾部。[报告及完整结果](../../review/endpoint_distribution_2026-10-26/report.md)。
-
-2026-10-26 新增[逐原生输出通用核验](NATIVE_VALIDATION.md)：InSituType/SingleR的372条真实存档标签端点通过逐实现ID对齐与独立复算；RCTD在固定128 spots上实际完成基线和两次半保留率重拟合，3幅连续组成场通过原生适配和R/Python独立核对。41项工程回归检查通过。原18组存档计划中6个BooleanRule组因源文件缺失保留为NOT_RUN；Cell2location/Tangram仍只有合成契约证据。支持三工具两语义的技术接入，未建立分类准确率或解析预测性能。[完整报告](../../review/classifier_general_validation_2026-10-26/report.md)。
-
-2026-10-23 新增[同图观察端点映射](ENDPOINT_BRIDGE.md)：O/E、固定类别数置换z、端点归一co-occurrence和未校正K/L。co-occurrence/R映射穷举5,184个小图标签配置，K/L另有坐标例，本机Squidpy 1.6.5四半径实际核验保留原生零与无支持状态差别。不是这些端点的全套rarefaction分布传播，也不更改原CLI默认行为。[完整处理记录](../../review/issues_4_9_resolution_2026-10-23/report.md)。
-
-2026-10-23 新增[区域完整11标记联合QC接口](REGIONAL_QC.md)：直接补事件log已进入区域NA，固定图输出条件O/E矩与直接CV。两个历史区域8条件保留肺结构性NA与肾低可用率；21项针对性检查、512分子draw、整数尾部及另写的边对参考均有完整记录。[本轮报告](../../review/regional_joint_qc_2026-10-23/report.md)。MC不足以核验两项肾CV；证书范围仍是输入浮点条件模型，未开展新队列或发布。
-
-2026-10-23 后续[三项 MC 差异与六项尾部修复](../../review/joint_qc_tail_resolution_2026-10-23/report.md)：3 个解析联合概率与精确有理数参考一致，8192 原抽样独立分类重放一致；6 个 QC failure 下溢新增有限 ln/log10 输出并逐项核验。17 项针对性检查通过、48 条旧字段不变，原失败和float下溢状态保留。[接口字段](FULL_RULE_QC.md)。未新增估计抽样或队列分析。
-
-2026-10-23 新增[完整 11 marker 联合 QC](FULL_RULE_QC.md)：支持实际候选规则、完整面板和 scalar/vector 保留率，固定图中 QC 失败归 OTHER。最终 11 项针对性检查通过；48 个 cell×p 与 8192 次分子抽样保留 3 个实际点位区间外差异和 6 个 QC 尾部下溢。首个真实故障的直接 QC 失败概率约 1.33e-32，精确有理数核验相对误差 4.13e-15。[完整报告与失败记录](../../review/joint_qc_full_rule_2026-10-23/report.md)。未发布新版本或运行新患者队列。
-
-2026-10-23 条件CV预算修复：新增Cervilla完整11-marker规则小试的**5条Xenium未决已全部获证**，最大因子1.001061≤1.25，五条完整worker耗时3.911–4.998秒（上限8秒），核心计算最大3.090秒（上限6秒）。固定12条件为10正CV获证、2精确零、0未决；原失败、首条CosMx汇总故障及其缺失遥测保留。[新修复报告](../../review/xenium_direct_cv_resolution_2026-10-23/report.md)。当前实现采用复合正权积分和有误差界的非负求和；本版本未重跑原72条肺/肾记录，两个版本的覆盖证据分别保留。未发布新版本。
-
-2026-10-23 新增 [联合 QC 与 O/E→置换 z 开发接口](JOINT_QC.md)：四 marker 联合 QC 经精确小例与两个历史窗口的分子 MC 核验；[R1–R4 完整报告](../../review/rarefaction_r1_r4_2026-10-23/report.md)保留 R1 联合判据失败、R2 缺件、原生方法比较及首次R3小试的5条预算未决。原 fixed-QC 路线及历史版本未改写。
-
-**原肺/肾工作负载的历史全覆盖（v2实现）**：[直接条件比值CV](DIRECT_CV.md)以`estimate_cv`输出数值包围和唯一主值。v2在同72条肺/肾记录的66条正CV均获≤1.25倍证书，原6条超时全部解决，肺/肾各33/33；单条最大4.178秒，保持原8秒硬限。旧60/66结果及6条失败完整保留，另6条结构性CV不可用也保留。[历史完整报告](../../review/direct_cv_full_coverage_2026-10-23/report.md)。这是固定条件模型/输入的数值覆盖。
-
-2026-10-19开发增量：[原生重拟合审计](REFIT_AUDIT.md)已完成既有InSituType/SingleR真实标签在六个FOV的空间端点复算；[报告与全部记录](../../review/native_annotation_bridge_2026-10-19/report.md)。这是历史数据中的条件经验稳定性证据，未建立解析预测性能、真实连续场性能或身份准确性。下文早期“未重跑正式真实数据验证”属于此前接口增量的历史状态。
-
-**当前源代码开发增量**：[主流空间统计接口](ECOSYSTEM.md)已增加 Squidpy、Giotto、cross-type Ripley K/L、标签与显式概率输入。原生小规模核验与形式/数值测试详见该文档；未发布新版本、未重跑正式真实数据验证。下文描述原有 0.2.0 CLI，其行为不变。
-
-可安装的本地诊断原型。输入固定细胞坐标及已经生成的标签轨迹，输出任意细胞类型对的成员变化、O/E、有向最近目标覆盖比例 G(r)、缺失原因和对基线的变化。**示例与单元测试主要是合成工程数据；候选规则已用于四套公开真实计数输入，尚未证明身份准确性、方法优势或用户收益。**
-
-2026-10-13 第二阶段执行记录见 [外部广度说明](../../external_breadth/phase2_2026-10-13/README.md)。冻结 v2 合同采用原生计数的固定 QC mask，复用了本包未修改的 marker 谱系规则；91 个条件和三个半径的批处理在该目录执行。独立数值路径已核对实际原始区域，原始 counts 重放也已通过。Squidpy 全部区域完成，Giotto 状态以该目录的逐图回执为准。第一阶段 wheel/source archive 是当时的历史版本，不倒改其中的执行声明。
-
-## 使用
-
-需要 Python 3.10+、NumPy、SciPy。在独立环境中本地安装本目录，或将本目录的 `src` 加入 `PYTHONPATH`。运行：
-
-```text
-python -m spatial_membership_audit --cells examples/cells.tsv --labels examples/labels.tsv --pair B,CD8 --pair CD8,Myeloid --radius-um 2 --out example_output
-```
-
-输出目录必须不存在。输入中的 `cell_id` 全局唯一；每个 replicate 必须覆盖相同细胞全集，基线名为 `baseline`。缺失检测应保留明确的 `UNKNOWN` / `LOW_DETECTION` 标签，不能删细胞。坐标已经换算成微米，不自动猜单位。不同 region 之间不连边。输入 TSV 的完整示例在 `examples/`。
-
-- `endpoints.tsv`：逐区域、细胞对、技术轨迹结果。所有NA保留为`NA`；空目标、无边、空集合分开；两方向G分别报告。
-- `receipt.json`：版本、输入hash、参数和解释边界。hash只标识输入，不能证明科学正确。
-
-O/E 使用固定无向半径图，随机标签期望为 `2*M*n_A*n_B/[N*(N-1)]`。G_A→B(r) 是已观察 A 细胞中，在 r 范围内能找到已观察 B 细胞的比例。它不使用边界校正，只描述观察窗口；不能解释为全组织G函数。没有目标时G为NA，不置零；有两类细胞但距离均过大时G=0，而无边O/E为NA。
-
-标签输入被视为候选定义，不是真值。0.2.0 增加 CosMx CSV 和 Xenium/10x H5 的只读计数导入器、格式核对入口，以及共同测得 marker 的候选规则。软件 CLI 本身不实施计数抽稀、患者推断、p 值、ROI 配准或 Squidpy/Giotto 比较；第二阶段的抽稀和官方工具适配另有项目脚本与执行记录。原生导入器已用于外部数据全量检查，候选规则也已在真实计数上执行。正式代码发布前还需确认代码许可与发布位置；本轮没有发布。
-
-## 平台计数核对
-
-在项目独立环境安装 `.[io]`（pandas、h5py、pyarrow）后运行：
-
-```text
-python -m spatial_membership_audit.inspect_counts --input cell_feature_matrix.h5 --platform xenium --out count_check.json
-python -m spatial_membership_audit.inspect_counts --input expression.csv.gz --platform cosmx --out count_check.json
-```
-
-核对非负整数、稀疏结构、唯一细胞键和 feature/control 类型；输出不含标签或空间结果。不会猜测坐标单位，不接受归一化值冒充原始 counts，不覆盖已有输出。H5 采用 cells 分批读取；CosMx 采用 CSV 分块读取。SHA256 仅标识实际读取的文件。
-
-`definitions.py` 的 `common125_candidate_v1` 是精确的候选规则实现，调用方必须提供固定的基线 QC mask。缺少任一必要基因时直接拒绝；CD4 必须有正向表达支持；竞争谱系及 CD4/CD8 双阳性保留为 AMBIGUOUS。它不是通用细胞注释器。额外原生基因不会默默改变候选定义，未测基因不得补零。
-
-## 核验
-
-`python -m unittest discover -s tests -v`。测试包含全枚举随机标签期望、定向G差异、目标缺失、无边、成员完全替换、区域隔离、乱序标签对齐、拒绝覆盖/不完整轨迹、平台矩阵方向与control保留、坏稀疏结构、重复列名、缺失基因和身份冲突。Windows 受限环境需将 TEMP/TMP 指向项目内可写目录。工程通过不构成生物身份验证或方法优越性证据。
-
-
-## 2026-10-26 增量价值开发检查
-
-新增[固定增量检查接口](INCREMENTAL_VALUE.md)：半收缩保留率、训练区标准化、固定惩罚拟合、整组重采样和联合增益门。一个历史标本中的半收缩有总体局部改善，但类别一致门失败；CV增广简单基线未建立稳定预警增量。该接口用于开发核验，CLI没有加入自动深度校正或CV阈值筛除。完整候选、反例、首次失败与模型记录见[本轮报告](../../review/incremental_value_2026-10-26/report.md)。
-
-## 2026-11-22 Rarefaction-Extrapolation (MITM), Conditional Coverage Matching & Joint-Permutation DUA (2.0.0rc2)
-
-- **Unsupervised depth & conditional coverage calibration**:
-  - `spatial_membership_audit.depth_matching`: `marginal_depth_ratio` and `select_auto_q` choose threshold-free common-depth thinning rates from post-QC positive transcript medians (`medpos`), while preserving legacy `balance_threshold < 1.0` when explicitly requested.
-  - `spatial_membership_audit.coverage_matching`: `conditional_instability_metrics`, `split_half_disagreement`, `build_split_half_curve`, and `match_split_half_coverage` compute classifier instability strictly conditional on classifiable cells (preventing `UNRESOLVED`/zero-cell dilution while reporting `unresolved_frac` separately) and match split-half label coverage across heterogeneous panels and platforms.
-- **Within-run Rarefaction-Extrapolation (`spatial_membership_audit.extrapolation`)**: `summarize_thinning_ladder`, `select_mitm_target_depth`, `build_extrapolation_guardrail`, and `extrapolate_ladder` extrapolate colocalization trajectories along the $1/\sqrt{d}$ shot-noise coordinate to meet-in-the-middle (MITM) or higher reference depths using hierarchical Empirical Bayes slope pooling (`prior_only`, `hier_eb`, `shrunk_step`), with automatic low-depth / high-flip guardrails falling back to rarefaction.
-- **Detection-uncertainty-aware ensemble inference (`spatial_membership_audit.dua_inference`)**: `summarize_dua_draws`, `exact_perm_z_from_draws`, `joint_perm_pairs_from_draws`, `decompose_dua_uncertainty`, and `conformal_prediction_band` separate fixed-input Monte Carlo precision (`mc_se_logr`), valid-zero ratio expectations (`r_mean`, `n_defined`, `n_defined_z`), joint-permutation null calibration (`z_dua`, `null_sd_z`, `permutation_p_z`, `null_corr_z`), and out-of-sample split-conformal repeat prediction bands.
-- **Thinning-stability weighting (`spatial_membership_audit.stability_weighting`)**: `cell_stability_weights`, `exact_weighted_perm_pair`, and `stability_weighted_colocalization` compute closed-form weighted permutation moments for unthinned native maps.
-- Verify all unit and regression tests via:
-
-```text
-PYTHONPATH=src OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python -m pytest tests -q
-```
+- Frozen Protocol Spec: [protocol/FROZEN_DEFAULT_PROTOCOL_v3.0.md](protocol/FROZEN_DEFAULT_PROTOCOL_v3.0.md)
+- scverse / Squidpy Tutorial: [tutorials/v2_scverse_standardization.md](tutorials/v2_scverse_standardization.md)
+- Reproducibility Guide: [reproducibility/README.md](reproducibility/README.md)
+- Historical Development Log (`0.2.0`–`2.0.0rc2`): [docs/HISTORICAL_DEVELOPMENT_LOG.md](docs/HISTORICAL_DEVELOPMENT_LOG.md)
+- License: [MIT License](LICENSE) | Citation: [CITATION.cff](CITATION.cff)

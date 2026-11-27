@@ -1,0 +1,3 @@
+scenario,true_equiv_ratio,autoq_q_a,autoq_q_b,p2_q_a,p2_q_b,unresolved_a,split_corr_check,binom_corr_check
+Uniform_2x_plus_25pct_zeros_in_A,0.5,1.0,0.5,1.0,0.4859612641016635,0.2515,-0.0022756143748085345,0.49955697484313916
+Equal_Depth_Unequal_SNR_1to3,0.3333333333333333,1.0,1.0,1.0,0.36560879640043586,0.0,-0.0022756143748085345,0.49955697484313916

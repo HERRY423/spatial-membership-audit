@@ -1,0 +1,61 @@
+{
+  "w_proseg": {
+    "session": "f72d2de87850",
+    "os": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "kernel": "6.6.159+",
+    "python": "3.13.18",
+    "cpus": 8,
+    "spatial_membership_audit": "3.0.0",
+    "anndata": "0.13.4",
+    "proseg_version": "proseg 3.2.0",
+    "st_r_versions": {
+      "SingleR": "2.12.0",
+      "celldex": "1.20.0"
+    },
+    "system_r_versions": {}
+  },
+  "w_comp": {
+    "session": "bf56d08cd562",
+    "os": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "kernel": "6.6.159+",
+    "python": "3.13.18",
+    "cpus": 8,
+    "spatial_membership_audit": "3.0.0",
+    "st_r_versions": {
+      "SingleR": "2.12.0",
+      "celldex": "1.20.0",
+      "spicyR": "1.22.0",
+      "crawdad": "1.0.1",
+      "SpatialExperiment": "1.20.0"
+    },
+    "system_r_versions": {
+      "panoramic": "0.99.4",
+      "R": "R version 4.6.1 (2026-06-24)"
+    }
+  },
+  "w_ntma": {
+    "session": "2041cba930a7",
+    "os": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "kernel": "6.6.159+",
+    "python": "3.13.18",
+    "cpus": 8,
+    "spatial_membership_audit": "3.0.0",
+    "anndata": "0.13.4",
+    "scanpy": "1.13.0",
+    "squidpy": "1.8.4",
+    "celltypist": "1.7.1",
+    "st_r_versions": {
+      "SingleR": "2.12.0",
+      "celldex": "1.20.0",
+      "spicyR": "1.22.0",
+      "crawdad": "1.0.1",
+      "InSituType": "2.0",
+      "SpatialExperiment": "1.20.0",
+      "batchelor": "1.26.0"
+    },
+    "system_r_versions": {
+      "panoramic": "0.99.4",
+      "R": "R version 4.6.1 (2026-06-24)"
+    }
+  }
+}

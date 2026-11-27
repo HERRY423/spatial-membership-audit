@@ -1,0 +1,8 @@
+{
+  "classifier": "InSituType::insitutypeML",
+  "package_version": "2.0",
+  "reference": "HPCA_6lineage_plus_OTHER",
+  "n_genes": 119,
+  "neg_rule": "pmax(0.01, 0.001 * cell_total_counts)",
+  "profile_scaling": "linear 2^log_hpca - 1 normalized to unit mean per lineage, floor 1e-4"
+}

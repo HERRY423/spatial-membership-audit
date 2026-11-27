@@ -1,0 +1,319 @@
+{
+  "Track_NA_Xenium_vs_CosMx_IF": {
+    "track": "Track_NA_Xenium_vs_CosMx_IF",
+    "medpos_a": 23.0,
+    "medpos_b": 3.0,
+    "shallower_side": "b",
+    "deeper_side": "a",
+    "r_depth": 0.13043478260869565,
+    "d_mitm_geom": 8.306623862918075,
+    "q0_frozen": 0.75,
+    "p2_both": {
+      "q_a": 0.1,
+      "q_b": 0.75,
+      "target_psi": 0.6155228100000001,
+      "noisier_side": "B",
+      "clamped": true
+    },
+    "schedules": {
+      "b": {
+        "scheduled": [
+          {
+            "tag": "q085",
+            "q": 0.85
+          },
+          {
+            "tag": "q075",
+            "q": 0.75
+          },
+          {
+            "tag": "q065",
+            "q": 0.65
+          },
+          {
+            "tag": "q050",
+            "q": 0.5
+          }
+        ],
+        "mapping": {
+          "q085": {
+            "q_target": 0.85,
+            "bank_tag": "q085",
+            "q_bank": 0.85,
+            "reused": false
+          },
+          "q075": {
+            "q_target": 0.75,
+            "bank_tag": "q075",
+            "q_bank": 0.75,
+            "reused": false
+          },
+          "q065": {
+            "q_target": 0.65,
+            "bank_tag": "q065",
+            "q_bank": 0.65,
+            "reused": false
+          },
+          "q050": {
+            "q_target": 0.5,
+            "bank_tag": "q050",
+            "q_bank": 0.5,
+            "reused": false
+          },
+          "p2_both": {
+            "q_target": 0.75,
+            "bank_tag": "q075",
+            "q_bank": 0.75,
+            "reused": true
+          }
+        }
+      },
+      "a": {
+        "scheduled": [
+          {
+            "tag": "autoq_both",
+            "q": 0.09782608695652173
+          },
+          {
+            "tag": "mitm_geom",
+            "q": 0.3611575592573076
+          }
+        ],
+        "mapping": {
+          "autoq_both": {
+            "q_target": 0.09782608695652173,
+            "bank_tag": "autoq_both",
+            "q_bank": 0.09782608695652173,
+            "reused": false
+          },
+          "mitm_geom": {
+            "q_target": 0.3611575592573076,
+            "bank_tag": "mitm_geom",
+            "q_bank": 0.3611575592573076,
+            "reused": false
+          },
+          "p2_both": {
+            "q_target": 0.1,
+            "bank_tag": "autoq_both",
+            "q_bank": 0.09782608695652173,
+            "reused": true
+          }
+        }
+      }
+    }
+  },
+  "Track_NB_Xenium_vs_MERSCOPE": {
+    "track": "Track_NB_Xenium_vs_MERSCOPE",
+    "medpos_a": 33.0,
+    "medpos_b": 2.0,
+    "shallower_side": "b",
+    "deeper_side": "a",
+    "r_depth": 0.06060606060606061,
+    "d_mitm_geom": 8.12403840463596,
+    "q0_frozen": 0.75,
+    "p2_both": {
+      "q_a": 0.15649825780957885,
+      "q_b": 0.75,
+      "target_psi": 0.5854673155555555,
+      "noisier_side": "B",
+      "clamped": false
+    },
+    "schedules": {
+      "b": {
+        "scheduled": [
+          {
+            "tag": "q085",
+            "q": 0.85
+          },
+          {
+            "tag": "q075",
+            "q": 0.75
+          },
+          {
+            "tag": "q065",
+            "q": 0.65
+          },
+          {
+            "tag": "q050",
+            "q": 0.5
+          }
+        ],
+        "mapping": {
+          "q085": {
+            "q_target": 0.85,
+            "bank_tag": "q085",
+            "q_bank": 0.85,
+            "reused": false
+          },
+          "q075": {
+            "q_target": 0.75,
+            "bank_tag": "q075",
+            "q_bank": 0.75,
+            "reused": false
+          },
+          "q065": {
+            "q_target": 0.65,
+            "bank_tag": "q065",
+            "q_bank": 0.65,
+            "reused": false
+          },
+          "q050": {
+            "q_target": 0.5,
+            "bank_tag": "q050",
+            "q_bank": 0.5,
+            "reused": false
+          },
+          "p2_both": {
+            "q_target": 0.75,
+            "bank_tag": "q075",
+            "q_bank": 0.75,
+            "reused": true
+          }
+        }
+      },
+      "a": {
+        "scheduled": [
+          {
+            "tag": "autoq_both",
+            "q": 0.045454545454545456
+          },
+          {
+            "tag": "mitm_geom",
+            "q": 0.24618298195866548
+          },
+          {
+            "tag": "p2_both",
+            "q": 0.15649825780957885
+          }
+        ],
+        "mapping": {
+          "autoq_both": {
+            "q_target": 0.045454545454545456,
+            "bank_tag": "autoq_both",
+            "q_bank": 0.045454545454545456,
+            "reused": false
+          },
+          "mitm_geom": {
+            "q_target": 0.24618298195866548,
+            "bank_tag": "mitm_geom",
+            "q_bank": 0.24618298195866548,
+            "reused": false
+          },
+          "p2_both": {
+            "q_target": 0.15649825780957885,
+            "bank_tag": "p2_both",
+            "q_bank": 0.15649825780957885,
+            "reused": false
+          }
+        }
+      }
+    }
+  },
+  "Track_NC_Xenium_Breast_vs_Panhuman": {
+    "track": "Track_NC_Xenium_Breast_vs_Panhuman",
+    "medpos_a": 21.0,
+    "medpos_b": 19.0,
+    "shallower_side": "b",
+    "deeper_side": "a",
+    "r_depth": 0.9047619047619048,
+    "d_mitm_geom": 19.974984355438178,
+    "q0_frozen": 0.75,
+    "p2_both": {
+      "q_a": 0.6236443087018508,
+      "q_b": 0.75,
+      "target_psi": 0.45897332,
+      "noisier_side": "B",
+      "clamped": false
+    },
+    "schedules": {
+      "b": {
+        "scheduled": [
+          {
+            "tag": "q085",
+            "q": 0.85
+          },
+          {
+            "tag": "q075",
+            "q": 0.75
+          },
+          {
+            "tag": "q065",
+            "q": 0.65
+          },
+          {
+            "tag": "q050",
+            "q": 0.5
+          }
+        ],
+        "mapping": {
+          "q085": {
+            "q_target": 0.85,
+            "bank_tag": "q085",
+            "q_bank": 0.85,
+            "reused": false
+          },
+          "q075": {
+            "q_target": 0.75,
+            "bank_tag": "q075",
+            "q_bank": 0.75,
+            "reused": false
+          },
+          "q065": {
+            "q_target": 0.65,
+            "bank_tag": "q065",
+            "q_bank": 0.65,
+            "reused": false
+          },
+          "q050": {
+            "q_target": 0.5,
+            "bank_tag": "q050",
+            "q_bank": 0.5,
+            "reused": false
+          },
+          "p2_both": {
+            "q_target": 0.75,
+            "bank_tag": "q075",
+            "q_bank": 0.75,
+            "reused": true
+          }
+        }
+      },
+      "a": {
+        "scheduled": [
+          {
+            "tag": "autoq_both",
+            "q": 0.6785714285714286
+          },
+          {
+            "tag": "mitm_geom",
+            "q": 0.9511897312113418
+          },
+          {
+            "tag": "p2_both",
+            "q": 0.6236443087018508
+          }
+        ],
+        "mapping": {
+          "autoq_both": {
+            "q_target": 0.6785714285714286,
+            "bank_tag": "autoq_both",
+            "q_bank": 0.6785714285714286,
+            "reused": false
+          },
+          "mitm_geom": {
+            "q_target": 0.9511897312113418,
+            "bank_tag": "mitm_geom",
+            "q_bank": 0.9511897312113418,
+            "reused": false
+          },
+          "p2_both": {
+            "q_target": 0.6236443087018508,
+            "bank_tag": "p2_both",
+            "q_bank": 0.6236443087018508,
+            "reused": false
+          }
+        }
+      }
+    }
+  }
+}

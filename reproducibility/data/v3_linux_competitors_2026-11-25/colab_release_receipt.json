@@ -1,0 +1,54 @@
+{
+  "timestamp_utc": "2026-11-26T20:22:14Z",
+  "vm_status": {
+    "w_comp": {
+      "done": true,
+      "fail": false,
+      "downloaded": {
+        "/content/v3work/competitors/results": [
+          "competitors_5a_native_mixed_ttma1_A_ttma1_B.csv",
+          "competitors_5a_paired_null_ttma1_A_ttma1_B.csv",
+          "competitors_5a_ucommon_ttma1_A_ttma1_B.csv"
+        ],
+        "/content/v3work/35core/results": [
+          "35core_3factor_ablation.csv",
+          "35core_exact_reproduction.csv",
+          "35core_marker_sparsity_diagnostics.csv"
+        ]
+      }
+    },
+    "w_ntma": {
+      "done": true,
+      "fail": false,
+      "downloaded": {
+        "/content/v3work/ntma/results": [
+          "ntma_fetch_receipt.json",
+          "ntma_joint_perm_jaccard.csv",
+          "ntma_organ_reversals.csv",
+          "ntma_paired_null_tests.csv",
+          "ntma_rates_and_audit.json",
+          "ntma_trackNA_if_concordance.csv",
+          "ntma_ucommon_summary.csv"
+        ],
+        "/content/v3work/competitors/results": [
+          "competitors_5a_native_mixed_ntma_NA.csv",
+          "competitors_5a_paired_null_ntma_NA.csv",
+          "competitors_5a_ucommon_ntma_NA.csv"
+        ],
+        "/content/v3work/classifiers/results": [
+          "celltypist_model_config.json",
+          "classifiers_m242t_boundary_flip.csv",
+          "classifiers_m242t_ucommon.csv",
+          "classifiers_rates_summary.json",
+          "classifiers_tma_if_concordance.csv",
+          "classifiers_tma_paired_null.csv",
+          "classifiers_tma_reversals.csv",
+          "classifiers_tma_ucommon.csv",
+          "insitutype_model_config.json"
+        ]
+      }
+    }
+  },
+  "colab_sessions": "[colab] A new version of Colab CLI is available: 0.8.0 (current: 0.7.5)\n[colab] Run 'colab update' to update.\n[colab] To silence this check, set \"enable_update_check\": false in ~/.config/colab-cli/settings.json\n\n[colab] No active sessions found on server.",
+  "colab_usage": "[colab] A new version of Colab CLI is available: 0.8.0 (current: 0.7.5)\n[colab] Run 'colab update' to update.\n[colab] To silence this check, set \"enable_update_check\": false in ~/.config/colab-cli/settings.json\n\nCurrent balance: 388.38 compute units\nUsage rate: 0.00/hr\nActive assignments: 0"
+}

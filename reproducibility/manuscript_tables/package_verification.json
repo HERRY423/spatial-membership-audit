@@ -1,0 +1,397 @@
+{
+  "generated_utc": "2026-11-27T07:58:06.230550+00:00",
+  "package_dir": "manuscript/gb_methodology_v3_2026-11-25",
+  "software_version": "3.0.0",
+  "software_freeze_tag": "v3.0.0-protocol-freeze-20261125",
+  "software_freeze_utc": "2026-11-25T14:12:08Z",
+  "software_tests": "248 passed, 79 subtests passed",
+  "embedded_figures": [
+    "Figure1_problem_framework_and_protocol_freeze.png",
+    "Figure2_theory_and_controlled_simulation.png",
+    "Figure3_same_platform_and_protein_validation.png",
+    "Figure4_cross_platform_competitors_and_classifiers.png",
+    "Figure5_prospective_ntma_and_35core_decomposition.png",
+    "Figure6_multicenter_reversals_and_operational_guide.png",
+    "SuppFigure1_m242t_registration_and_imc_qc.png",
+    "SuppFigure2_sensitivity_and_conformal_sweeps.png"
+  ],
+  "c_drive_free_gb": 3.44,
+  "audits": {
+    "abstract_word_count_whitespace": 98,
+    "abstract_limit": 100,
+    "abstract_pass": true,
+    "pending_colab_markers": 0,
+    "windows_unavailable_leaks": [],
+    "forbidden_tokens_manuscript": [],
+    "forbidden_tokens_enquiry": [],
+    "exact_guarantee_occurrences": 8,
+    "exact_guarantee_all_preconditioned": true,
+    "references_total": 26,
+    "references_all_cited": true,
+    "discussion_tool_citations_verified": true,
+    "figure_panels_verified": true,
+    "enquiry_numbers_synced": true,
+    "phase0_attachments_present": [
+      "Additional_file_1_Supplementary_Information.pdf",
+      "Additional_file_2_Supplementary_Tables.xlsx",
+      "SuppFigure1_m242t_registration_and_imc_qc.pdf",
+      "COVER_LETTER_GENOME_BIOLOGY.md",
+      "SUGGESTED_REVIEWERS_AND_CHECKLIST.md",
+      "AUTHOR_SIGNOFF_CHECKLIST.md"
+    ],
+    "ntma_all_4_files_postdate_freeze": true,
+    "colab_release_verified_zero_usage": true,
+    "linux_env_vms_recorded": [
+      "w_comp",
+      "w_ntma",
+      "w_proseg"
+    ],
+    "numerical_cross_checks_total": 32,
+    "numerical_cross_checks_passed": 32,
+    "numerical_cross_checks": [
+      {
+        "name": "Item1_freeze_tag",
+        "source_value": "v3.0.0-protocol-freeze-20261125",
+        "expected_substring": "v3.0.0-protocol-freeze-20261125",
+        "passed": true
+      },
+      {
+        "name": "Item1_freeze_utc",
+        "source_value": "2026-11-25T14:12:08Z",
+        "expected_substring": "2026-11-25T14:12:08Z",
+        "passed": true
+      },
+      {
+        "name": "Item2_Wang_r1r2_Ucommon_ICC",
+        "source_value": "0.855",
+        "expected_substring": "0.855",
+        "passed": true
+      },
+      {
+        "name": "Item2_Wang_r1r2_Ucommon_MAE",
+        "source_value": "0.146",
+        "expected_substring": "0.146",
+        "passed": true
+      },
+      {
+        "name": "Item8_BR1_Stab_w1_MAE",
+        "source_value": "0.279",
+        "expected_substring": "0.279",
+        "passed": true
+      },
+      {
+        "name": "Item2_BR2_Soft_IF_neg_rho",
+        "source_value": "-0.160",
+        "expected_substring": "\u22120.160",
+        "passed": true
+      },
+      {
+        "name": "Item2_M242T_U190_MITM_ICC",
+        "source_value": "0.876",
+        "expected_substring": "0.876",
+        "passed": true
+      },
+      {
+        "name": "Item2_M242T_U190_MITM_poly_r",
+        "source_value": "0.803",
+        "expected_substring": "0.803",
+        "passed": true
+      },
+      {
+        "name": "Item2_tTMA1_TrackA_SH_ICC",
+        "source_value": "0.846",
+        "expected_substring": "0.846",
+        "passed": true
+      },
+      {
+        "name": "Item2_tTMA1_TrackB_Soft_ICC_collapse",
+        "source_value": "0.571",
+        "expected_substring": "0.571",
+        "passed": true
+      },
+      {
+        "name": "Item8_TrackA_within_paired_FDR",
+        "source_value": "2.7%",
+        "expected_substring": "2.7%",
+        "passed": true
+      },
+      {
+        "name": "Item8_TrackA_disjoint_5050_FDR",
+        "source_value": "3.0%",
+        "expected_substring": "3.0%",
+        "passed": true
+      },
+      {
+        "name": "Item8_TrackA_pan_paired_honest",
+        "source_value": "46.7%",
+        "expected_substring": "46.7%",
+        "passed": true
+      },
+      {
+        "name": "Item3_Proseg_Naive_ICC",
+        "source_value": "0.883",
+        "expected_substring": "0.883",
+        "passed": true
+      },
+      {
+        "name": "Item3_Proseg_SH2s_ICC",
+        "source_value": "0.969",
+        "expected_substring": "0.969",
+        "passed": true
+      },
+      {
+        "name": "Item3_Proseg_SH2s_red_vs_Proseg",
+        "source_value": "52.6%",
+        "expected_substring": "+52.6%",
+        "passed": true
+      },
+      {
+        "name": "Item3_Proseg_Soft_IF_collapse",
+        "source_value": "0.280",
+        "expected_substring": "0.280",
+        "passed": true
+      },
+      {
+        "name": "Item3_spicyR_TrackA_ICC",
+        "source_value": "0.771",
+        "expected_substring": "0.771",
+        "passed": true
+      },
+      {
+        "name": "Item3_CRAWDAD_TrackA_ICC",
+        "source_value": "0.830",
+        "expected_substring": "0.830",
+        "passed": true
+      },
+      {
+        "name": "Item3_PANORAMIC_TrackA_ICC",
+        "source_value": "0.852",
+        "expected_substring": "0.852",
+        "passed": true
+      },
+      {
+        "name": "Item4_Sim_SH_power_030",
+        "source_value": "98.3%",
+        "expected_substring": "98.3%",
+        "passed": true
+      },
+      {
+        "name": "Item1_nTMA_NA_SH_ICC",
+        "source_value": "0.341",
+        "expected_substring": "0.341",
+        "passed": true
+      },
+      {
+        "name": "Item1_nTMA_NA_SH_red",
+        "source_value": "47.1%",
+        "expected_substring": "+47.1%",
+        "passed": true
+      },
+      {
+        "name": "Item1_nTMA_NC_SH_ICC",
+        "source_value": "0.819",
+        "expected_substring": "0.819",
+        "passed": true
+      },
+      {
+        "name": "Item5_InSituType_TrackA_ICC",
+        "source_value": "0.834",
+        "expected_substring": "0.834",
+        "passed": true
+      },
+      {
+        "name": "Item5_CellTypist_TrackA_ICC",
+        "source_value": "0.629",
+        "expected_substring": "0.629",
+        "passed": true
+      },
+      {
+        "name": "Item5_CellTypist_nTMA_ICC",
+        "source_value": "0.314",
+        "expected_substring": "0.314",
+        "passed": true
+      },
+      {
+        "name": "Item7_35core_neg_repro",
+        "source_value": "-36.5%",
+        "expected_substring": "\u221236.5%",
+        "passed": true
+      },
+      {
+        "name": "Item7_35core_CosXen_full_ICC",
+        "source_value": "0.842",
+        "expected_substring": "0.842",
+        "passed": true
+      },
+      {
+        "name": "Item7_35core_CosMER_full_red",
+        "source_value": "32.1%",
+        "expected_substring": "+32.1%",
+        "passed": true
+      },
+      {
+        "name": "Item6_Prop1_zero_inc_bias",
+        "source_value": "-0.003",
+        "expected_substring": "\u22120.003",
+        "passed": true
+      },
+      {
+        "name": "Item6_Prop1_pos_only_bias",
+        "source_value": "0.354",
+        "expected_substring": "+0.354",
+        "passed": true
+      }
+    ]
+  },
+  "deliverable_count": 37,
+  "sha256_manifest": {
+    "manuscript/gb_methodology_v3_2026-11-25/Additional_file_1_Supplementary_Information.pdf": {
+      "bytes": 3737452,
+      "sha256": "5c4cc0b31dd8acdca9aa7ba90a1503d7ff3171ec487c5a795237457ff910d8cb"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/Additional_file_2_Supplementary_Tables.xlsx": {
+      "bytes": 295571,
+      "sha256": "ed3b2d285bb41cf8dba59a3c5f7ec83460b429cf3b86735eaf70f0d3ba61b208"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/ANALYSIS_HISTORY.md": {
+      "bytes": 9369,
+      "sha256": "99d5ceb58ff4235fa12d8af49e29c1d2cd5148e5cd9beac41f2a534da608cc80"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/AUTHOR_SIGNOFF_CHECKLIST.md": {
+      "bytes": 4200,
+      "sha256": "4d6aa17938b901b2b1be394275157a57c471437765365c3f891423519a8b0d70"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/COVER_LETTER_GENOME_BIOLOGY.md": {
+      "bytes": 6113,
+      "sha256": "fb359105fe866c8694ae2b34ae9cd8d899699dad5c57a3de4bc639e4e83c09d3"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/EVIDENCE_CROSSWALK.md": {
+      "bytes": 10651,
+      "sha256": "505f61b3ed7f508952c3b7990f23021a920c108647462aa8ff9586b3710d3b74"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/Figure1_problem_framework_and_protocol_freeze.pdf": {
+      "bytes": 39402,
+      "sha256": "662e5e2ee2afc9dd564f39b122d1d8355b710fdf3be047e4a07c86c751ec7fb4"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/Figure1_problem_framework_and_protocol_freeze.png": {
+      "bytes": 872661,
+      "sha256": "e86f6706aa832ac2a2c7b4ed13632cdfc285da5799b76cedaefc66d90b0d361b"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/Figure2_theory_and_controlled_simulation.pdf": {
+      "bytes": 44344,
+      "sha256": "abd0a9a674941d33730e1890eed2ac4c8ee4d75bc9e4b9bdd05526d0643be37a"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/Figure2_theory_and_controlled_simulation.png": {
+      "bytes": 1079949,
+      "sha256": "d992f8d8498aef4b3ca0c42426d8ba424c9537cf1a4163b118cc72d276eaab0e"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/Figure3_same_platform_and_protein_validation.pdf": {
+      "bytes": 74253,
+      "sha256": "882d5aab9353ce5b0eae318f9bc8a123780d6572785c6f919a338218a9e81e1b"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/Figure3_same_platform_and_protein_validation.png": {
+      "bytes": 1163099,
+      "sha256": "437b09dc614edb00f6157c12f41a7c510acb684c57df3bbfce764b858a015a69"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/Figure4_cross_platform_competitors_and_classifiers.pdf": {
+      "bytes": 60252,
+      "sha256": "f5916c49952ade071a04ae7a7f0ff999bcab11a75f687d77faa5eae0a04a90a1"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/Figure4_cross_platform_competitors_and_classifiers.png": {
+      "bytes": 856684,
+      "sha256": "b91b6100a547b03409772fc30ab8af274eb71ac959a67834244e8bfbd7d8cdb9"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/Figure5_prospective_ntma_and_35core_decomposition.pdf": {
+      "bytes": 87312,
+      "sha256": "7d7a0a0e38b3411e1f1c90a2bc0c68cfa8690bf12e82f89fc80b08e248b464b5"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/Figure5_prospective_ntma_and_35core_decomposition.png": {
+      "bytes": 1037927,
+      "sha256": "8afd98b271d09e4570c54dc05f815fa4705457e987a6d2cfcf187223d9b120a2"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/Figure6_multicenter_reversals_and_operational_guide.pdf": {
+      "bytes": 68090,
+      "sha256": "b44bbfac5b0800911b3e9b2fa4c7a3b9744c90faacf441ad6b2f3e791a1ef2fa"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/Figure6_multicenter_reversals_and_operational_guide.png": {
+      "bytes": 847493,
+      "sha256": "7eadb931e84cf38a9259b0158675a25dc714b0a0d083a55dcf119153eadd0340"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/SuppFigure1_m242t_registration_and_imc_qc.pdf": {
+      "bytes": 3539105,
+      "sha256": "e3aafb43e6713b2dd4cd6ec84be695a963bce8ec069cf8f330c99ce0cab43870"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/SuppFigure1_m242t_registration_and_imc_qc.png": {
+      "bytes": 3349392,
+      "sha256": "be49c9ce757bc5d6e7afd56415cc9abadc4914d8c98e3558581cba7f0fcce238"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/SuppFigure2_sensitivity_and_conformal_sweeps.pdf": {
+      "bytes": 38417,
+      "sha256": "ed2b13bd73378aa588f44efb64d589d2bc392c959abf112a04471ed8660f43e4"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/figures/SuppFigure2_sensitivity_and_conformal_sweeps.png": {
+      "bytes": 623157,
+      "sha256": "bc1efd4b9f0ad4e3a1444790938fb80a446e08dc71b3d5eef8a2d9c40736e978"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/MANUSCRIPT_GB_METHODOLOGY_v3.md": {
+      "bytes": 116272,
+      "sha256": "32c7d786e8e17c6d74e0518cc687a898cc5b7e48708ae5df223512bf005be6c7"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/PRESUBMISSION_ENQUIRY.md": {
+      "bytes": 7652,
+      "sha256": "c785a6ae4bf1b20cbdc53807313ad1f969ae8bee8d657af3b5b4fe66dc514e65"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/scripts/build_additional_files_v3.py": {
+      "bytes": 19943,
+      "sha256": "b50d7b4ee66505f3a8f6167bd036da79b78056f59db855f986a6766ed35a16f5"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/scripts/build_docx_and_verify_v3.py": {
+      "bytes": 34933,
+      "sha256": "a6a0799b4c428ec62ac73cb36a1f7251c59cd055250eb3571367b22e859b2d7f"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/scripts/build_fig3.py": {
+      "bytes": 23746,
+      "sha256": "06012049100a123cbbbfaf5814832c5727668f68ec26db20bcc279a615cdb6d1"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/scripts/build_fig4.py": {
+      "bytes": 15473,
+      "sha256": "9ef3e7547c7c5a848090d66d9a83e4a895555092630056f57f126a175b7751d1"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/scripts/build_fig5.py": {
+      "bytes": 18537,
+      "sha256": "2ca0ec45b939914dca6d8c5a8fa00cdeda5936d52516c2ccd9d2bb6f9cb2c394"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/scripts/build_fig6.py": {
+      "bytes": 12205,
+      "sha256": "84fcd66adc888a7d3a26a08f31fb3cd327d26d06905284a38a57d9fbdb23b66a"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/scripts/build_figs_1_2_supp.py": {
+      "bytes": 22742,
+      "sha256": "3071060b87a55ddc988d0a069858e1dfe6290c3c2577210c233efb6e37242d6a"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/scripts/publish_reproducibility_archive.py": {
+      "bytes": 23351,
+      "sha256": "bf01e11756aef3da823c958f0bbfd4239d268c2757935205a5f498d749a8e4fd"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/Spatial_Colocalization_GB_Methodology_v3.docx": {
+      "bytes": 9199809,
+      "sha256": "0577a1c0f65755baaefc5daf23901984642ce684e35bfe9a80b5df7733ce3d76"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/SUGGESTED_REVIEWERS_AND_CHECKLIST.md": {
+      "bytes": 5427,
+      "sha256": "156d2c6128a11f95918d7f275d8ca1caf7fae98c0c24710c01989670a37b080e"
+    },
+    "manuscript/gb_methodology_v3_2026-11-25/SUPPLEMENTARY_APPENDIX.md": {
+      "bytes": 20654,
+      "sha256": "8ffcfed9b590a97f8ecff1540b899c1978dd59373161ebcd91554b2abf5b2c5f"
+    },
+    "software/spatial_membership_audit/dist/spatial_membership_audit-3.0.0-py3-none-any.whl": {
+      "bytes": 166317,
+      "sha256": "bd059d68154c3aa8e6b0d4ab7b07b26701062ec3cd99d762a139313d03991e51"
+    },
+    "software/spatial_membership_audit/dist/spatial_membership_audit-3.0.0.tar.gz": {
+      "bytes": 209631,
+      "sha256": "8c3ccad4f75d69a66f79c4400ffad2e84d5285d578effd07db9fe56c29a5d0d1"
+    }
+  }
+}

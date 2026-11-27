@@ -1,0 +1,46 @@
+{
+  "repository": "https://github.com/HERRY423/spatial-membership-audit",
+  "branch": "main",
+  "commit_sha": "aa2ec5f1a8c8d488ad5bb95df8b2331e1b40141e",
+  "tag_name": "v3.0.0-protocol-freeze-20261125",
+  "tag_url": "https://github.com/HERRY423/spatial-membership-audit/releases/tag/v3.0.0-protocol-freeze-20261125",
+  "tag_object_sha": "b7982ed12e034929dc96b8bd53425c6fa9c6a425",
+  "tagger_utc": "2026-11-25T14:12:08Z",
+  "script_utc": "2026-11-25T14:12:05Z",
+  "protocol_v3_default_json_sha256": "468de661fb885938a396e9a536ba90ca6f36b5a6ceab2c279a08cd7c682e9459",
+  "files_committed": 112,
+  "github_ref_verified": {
+    "ref": "refs/tags/v3.0.0-protocol-freeze-20261125",
+    "node_id": "REF_kwDOV7r3EdoAKXJlZnMvdGFncy92My4wLjAtcHJvdG9jb2wtZnJlZXplLTIwMjYxMTI1",
+    "url": "https://api.github.com/repos/HERRY423/spatial-membership-audit/git/refs/tags/v3.0.0-protocol-freeze-20261125",
+    "object": {
+      "sha": "b7982ed12e034929dc96b8bd53425c6fa9c6a425",
+      "type": "tag",
+      "url": "https://api.github.com/repos/HERRY423/spatial-membership-audit/git/tags/b7982ed12e034929dc96b8bd53425c6fa9c6a425"
+    }
+  },
+  "github_tag_verified": {
+    "node_id": "TA_kwDOV7r3EdoAKGI3OTgyZWQxMmUwMzQ5MjlkYzk2YjhiZDUzNDI1YzZmYTljNmE0MjU",
+    "sha": "b7982ed12e034929dc96b8bd53425c6fa9c6a425",
+    "url": "https://api.github.com/repos/HERRY423/spatial-membership-audit/git/tags/b7982ed12e034929dc96b8bd53425c6fa9c6a425",
+    "tagger": {
+      "name": "HERRY423",
+      "email": "HERRY423@users.noreply.github.com",
+      "date": "2026-11-25T14:12:08Z"
+    },
+    "object": {
+      "sha": "aa2ec5f1a8c8d488ad5bb95df8b2331e1b40141e",
+      "type": "commit",
+      "url": "https://api.github.com/repos/HERRY423/spatial-membership-audit/git/commits/aa2ec5f1a8c8d488ad5bb95df8b2331e1b40141e"
+    },
+    "tag": "v3.0.0-protocol-freeze-20261125",
+    "message": "Protocol freeze v3.0.0 prior to opening Wang 2025 nTMA expression data\nUTC: 2026-11-25T14:12:05Z\nprotocol_v3_default.json SHA-256: 468de661fb885938a396e9a536ba90ca6f36b5a6ceab2c279a08cd7c682e9459\n",
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  }
+}

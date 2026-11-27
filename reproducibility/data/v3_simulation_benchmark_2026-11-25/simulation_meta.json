@@ -1,0 +1,11 @@
+{
+  "S_DEEP": 100.0,
+  "N_GENES": 60,
+  "CORE_CELLS": 1000,
+  "mu_base": 0.45,
+  "seg_mu_base": -0.45,
+  "n_factorial_reps_per_cell": 60,
+  "total_factorial_cohorts": 2880,
+  "n_discard_curve_reps_per_cell": 160,
+  "elapsed_sec": 2641.36
+}

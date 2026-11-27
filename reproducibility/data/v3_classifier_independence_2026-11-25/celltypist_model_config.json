@@ -1,0 +1,13 @@
+{
+  "classifier": "CellTypist (L2-regularized multinomial logistic regression)",
+  "celltypist_version": "1.7.1",
+  "reference": "HPCA_6lineage_plus_OTHER (identical to SingleR & InSituType)",
+  "normalization": "log1p(CP10k) on shared panel counts",
+  "hyperparameters": {
+    "C": 1.0,
+    "max_iter": 500,
+    "use_SGD": false,
+    "feature_selection": false,
+    "majority_voting": false
+  }
+}

@@ -1,0 +1,3 @@
+gsm,patient,n_vendor_cells,n_proseg_cells,match_le_10um_pct,match_le_5um_pct,median_centroid_shift_um,vendor_med_tx,proseg_med_tx
+GSM8513809,Patient_BR1_4066_27FOVs,22302,21356,99.78460385840044,95.85596553661735,1.4075061713975625,130.0,308.0
+GSM8513811,Patient_BR2_4399_27FOVs,21373,19778,99.56011730205279,92.22873900293254,1.7247368929812277,154.0,374.0
